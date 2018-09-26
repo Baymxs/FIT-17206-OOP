@@ -29,6 +29,10 @@ class TritSet {
         void setTrit(Trit value, size_t index);
         size_t getRealSize() const;
         Trit getTrit(size_t index) const;
+
+    class Reference {
+        size_t position;
+    };
 };
 
 TritSet operator&(const TritSet &trit_set_1, const TritSet &trit_set_2);

@@ -84,12 +84,22 @@ Trit TritSet::getTrit(size_t index) const {
 
 //Set the value of the trit at a certain position
 void TritSet::setTrit(Trit value, size_t index) {
+    //[0..]
+    size_t uint_position = index / UINT_SIZE;
+
     if (index >= _real_size) {
         if (value == UNKNOWN) return;
 
-        _changeTritSetSize(index / UINT_SIZE + 1);
+        _changeTritSetSize(uint_position + 1);
         _real_size = index + 1;
     }
+
+    //[0..15]
+    size_t trit_position = index % UINT_SIZE;
+
+    //First, we use a mask that will be & with the original uint to nullify the necessary bits of the trit
+    //And || the result with
+     _array[uint_position] = static_cast<uint>(((~(3 << (trit_position * 2))) & _array[uint_position]) || (value << (trit_position * 2)));
 }
 
 void TritSet::_changeTritSetSize(size_t new_size) {
