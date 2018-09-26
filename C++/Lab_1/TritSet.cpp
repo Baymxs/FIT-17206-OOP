@@ -55,6 +55,21 @@ Trit TritSet::operator[](size_t index) const {
     return getTrit(index);
 }
 
+TritSet& TritSet::operator=(TritSet const& tritSet) {
+    if (this == &tritSet)
+        return *this;
+    delete[] _array;
+
+    _real_size = tritSet._real_size;
+    _allocated_size = tritSet._allocated_size;
+    _array_size = tritSet._array_size;
+
+    _array = new uint[_array_size];
+
+    memcpy(_array, tritSet._array, tritSet._array_size * sizeof(uint));
+
+    return *this;
+}
 //Constructor with size and trit value
 TritSet::TritSet(size_t size, Trit value) {
     _real_size = _array_size = size;
@@ -116,6 +131,5 @@ void TritSet::_changeTritSetSize(size_t new_size) {
     delete []_array;
     _array = new_array;
 }
-
 
 

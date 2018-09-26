@@ -26,6 +26,7 @@ class TritSet {
     public:
         TritSet(size_t size, Trit value);
         Trit operator[](size_t index) const;
+        TritSet& operator=(TritSet const& tritSet);
         void setTrit(Trit value, size_t index);
         size_t getRealSize() const;
         Trit getTrit(size_t index) const;
