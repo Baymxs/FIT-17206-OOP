@@ -3,11 +3,13 @@
 //
 
 #include "Trit.h"
-//Operator '!' overloading for Trit
-Trit operator! (Trit trit) {
+
+//Operator '~' overloading for Trit
+Trit operator~(Trit trit) {
     if (trit == TRUE) return FALSE;
-    if (trit == FALSE) return TRUE;
-    if (trit == UNKNOWN) return UNKNOWN;
+    else if (trit == FALSE) return TRUE;
+    else return UNKNOWN;
+
 }
 
 //Operator '&' overloading for Trit

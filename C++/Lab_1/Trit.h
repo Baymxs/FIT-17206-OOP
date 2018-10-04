@@ -7,7 +7,7 @@
 
 enum Trit {FALSE = 1, UNKNOWN = 0, TRUE = 2};
 
-Trit operator!(Trit trit_1);
+Trit operator~(Trit trit_1);
 Trit operator&(Trit trit_1, Trit trit_2);
 Trit operator|(Trit trit_1, Trit trit_2);
 
