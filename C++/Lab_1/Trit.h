@@ -5,6 +5,8 @@
 #ifndef LAB_1_TRIT_H
 #define LAB_1_TRIT_H
 
+#include <iostream>
+
 enum Trit {FALSE = 1, UNKNOWN = 0, TRUE = 2};
 
 Trit operator~(Trit trit_1);
