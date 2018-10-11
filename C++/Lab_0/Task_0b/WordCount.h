@@ -20,10 +20,11 @@ class WordCount {
 
     public:
         WordCount(int argc, char *input_file_name, char *output_file_name);
-        void readData();
-        auto makeSortedSet();
-        void writeToFile();
         void go();
+    private:
+        void _readData();
+        auto _makeSortedSet();
+        void _writeToFile();
 };
 
 #endif //WITH_OOP_WORDCOUNT_H
