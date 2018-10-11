@@ -297,13 +297,33 @@ void TritSet::trim(size_t last_index) {
 
     _array[uint_position] = _array[uint_position] & (~((uint)0) >> 2 * ((UINT_SIZE - 1) - ((last_index) % (UINT_SIZE - 1))));
 
-    _logical_size = _search_logical_size() ;
+    _logical_size = _search_last_index() + 1;
 }
 
-size_t TritSet::_search_logical_size() const {
-    long logical_index = -1;
+size_t TritSet::_search_last_index() const {
+    long last_index = -1;
     for (size_t i = 0; i < _max_size; i++)
         if (_getTrit(i) != UNKNOWN)
-            logical_index = i;
-    return logical_index + 1;
+            last_index = i;
+    return last_index;
 }
+
+size_t TritSet::capacity() const {
+    return _max_size;
+}
+
+void TritSet::shrink() {
+    if (!_allocated_size) {
+        return;
+    }
+
+    size_t last_index = _search_last_index() + 1;
+    if (last_index < (_allocated_size - 1) * UINT_SIZE) {
+        return;
+    }
+
+    _changeTritSetSize(last_index / (UINT_SIZE) + 1);
+    _max_size = (last_index + 1);
+}
+
+

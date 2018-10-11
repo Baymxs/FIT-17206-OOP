@@ -51,6 +51,8 @@ class TritSet {
         std::unordered_map<Trit, size_t, std::hash<int>> cardinality() const;
 
         void trim(size_t);
+        size_t capacity() const;
+        void shrink();
     private:
         uint *_array;
 
@@ -68,7 +70,7 @@ class TritSet {
         void _changeCountsOfTrits(size_t new_value, Trit old_value);
         void _setStartCounts(Trit, size_t);
         Trit _getTrit(size_t) const;
-        size_t _search_logical_size() const;
+        size_t _search_last_index() const;
 };
 
 TritSet operator&(const TritSet &trit_set_1, const TritSet &trit_set_2);
