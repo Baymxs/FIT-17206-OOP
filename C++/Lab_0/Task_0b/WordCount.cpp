@@ -15,7 +15,7 @@ WordCount::WordCount(int argc, char *input_file_name, char *output_file_name) {
     }
 }
 
-void WordCount::readData() {
+void WordCount::_readData() {
     int smb, break_point = 1;
     string word;
 
@@ -36,7 +36,7 @@ void WordCount::readData() {
     }
 }
 
-auto WordCount::makeSortedSet() {
+auto WordCount::_makeSortedSet() {
 
     //Creating a lambda function to compare pairs of set container
     auto comparator =
@@ -49,15 +49,15 @@ auto WordCount::makeSortedSet() {
     return CSV_set;
 }
 
-void WordCount::writeToFile() {
-    auto CSV_set = makeSortedSet();
+void WordCount::_writeToFile() {
+    auto CSV_set = _makeSortedSet();
     for (pair<string, int> element : CSV_set) {
         output_file << element.first << "," << element.second << "," << (float)element.second/count_of_words << "%" << endl;
     }
 }
 
 void WordCount::go() {
-    readData();
-    makeSortedSet();
-    writeToFile();
+    _readData();
+    _makeSortedSet();
+    _writeToFile();
 }
