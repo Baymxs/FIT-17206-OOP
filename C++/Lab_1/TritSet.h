@@ -48,7 +48,7 @@ class TritSet {
         size_t size() const;
 
         size_t cardinality(Trit value) const;
-        std::unordered_map<Trit, size_t, std::hash<int>> cardinality() const;
+        std::unordered_map<Trit, size_t, std::hash<size_t>> cardinality() const;
 
         void trim(size_t);
         size_t capacity() const;

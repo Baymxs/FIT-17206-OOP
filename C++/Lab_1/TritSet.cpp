@@ -216,6 +216,14 @@ void TritSet::_setTrit(Trit value, size_t index) {
         _array[uint_position] = static_cast<uint>(((~(3 << (trit_position * 2))) & _array[uint_position]) |
                                                   value_with_shift);
     }
+
+    if (index + 1 == _logical_size && value == UNKNOWN) {
+        _logical_size = _search_last_index() + 1;
+    } else {
+        if (value != UNKNOWN && index + 1 > _logical_size) {
+            _logical_size = index + 1;
+        }
+    }
 }
 
 //Change the TritSet size
@@ -263,11 +271,11 @@ size_t TritSet::cardinality(Trit value) const{
 
 
 //Get the number of trits for all values ​​and put them to the unordered_map
-std::unordered_map<Trit, size_t, std::hash<int>> TritSet::cardinality() const {
-    std::unordered_map<Trit, size_t, std::hash<int>> unordered_map;
+std::unordered_map<Trit, size_t, std::hash<size_t>> TritSet::cardinality() const {
+    std::unordered_map<Trit, size_t, std::hash<size_t>> unordered_map;
     unordered_map[TRUE] = _true_count;
     unordered_map[FALSE] = _false_count;
-    unordered_map[TRUE] = _unknown_count;
+    unordered_map[UNKNOWN] = _unknown_count;
     return unordered_map;
 }
 
