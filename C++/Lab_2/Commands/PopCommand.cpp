@@ -7,6 +7,7 @@
 #include "../CommandFactory.h"
 #include "../CommandCreators/PopCommandCreator.h"
 #include "../StackCalculator.h"
+#include "../Exceptions/StackException.h"
 
 //Initialize the command before running main
 //Anonymous namespace
@@ -21,5 +22,7 @@ namespace {
 }
 
 void PopCommand::execute(std::vector<std::string>) {
+    if (StackCalculator::stack.empty())
+        throw StackException("Not enough stack items");
     StackCalculator::stack.pop();
 }

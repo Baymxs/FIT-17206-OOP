@@ -8,6 +8,7 @@
 #include <map>
 
 #include "CommandCreator.h"
+#include "Exceptions/WrongCommandNameException.h"
 
 class CommandFactory {
 
@@ -35,7 +36,7 @@ class CommandFactory {
         Command* getCommand(const std::string &name) {
             auto it = commands.find(name);
             if (it == commands.end()) {
-                throw std::exception();
+                throw WrongCommandNameException("Command not registered yet");
             }
             return  it->second->create();
         }

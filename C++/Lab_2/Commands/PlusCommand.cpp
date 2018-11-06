@@ -7,6 +7,7 @@
 #include "../CommandFactory.h"
 #include "../CommandCreators/PlusCommandCreator.h"
 #include "../StackCalculator.h"
+#include "../Exceptions/StackException.h"
 
 //Initialize the command before running main
 //Anonymous namespace
@@ -21,6 +22,9 @@ namespace {
 }
 
 void PlusCommand::execute(std::vector<std::string>) {
+    if (StackCalculator::stack.empty() || StackCalculator::stack.size() == 1)
+        throw StackException("Not enough stack items");
+
     double argument_1 = StackCalculator::stack.top();
     StackCalculator::stack.pop();
 

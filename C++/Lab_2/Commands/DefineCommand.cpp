@@ -4,6 +4,8 @@
 
 #include "DefineCommand.h"
 
+#include "../Exceptions/ArgumentException.h"
+
 #include "../CommandFactory.h"
 #include "../CommandCreators/DefineCommandCreator.h"
 #include "../StackCalculator.h"
@@ -21,6 +23,9 @@ namespace {
 }
 
 void DefineCommand::execute(std::vector<std::string> arg_vector) {
+    if (arg_vector.size() != 2)
+        throw ArgumentException("Invalid number of arguments");
+
     int value_state = 0;
 
     for (int i = 0; i < arg_vector.size(); i++) {

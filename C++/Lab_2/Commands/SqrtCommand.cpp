@@ -7,6 +7,7 @@
 #include "../CommandFactory.h"
 #include "../CommandCreators/SqrtCommandCreator.h"
 #include "../StackCalculator.h"
+#include "../Exceptions/StackException.h"
 #include <math.h>
 
 //Initialize the command before running main
@@ -21,11 +22,12 @@ namespace {
     bool state = initializePushCommand();
 }
 
-void SqrtCommand::execute(std::vector<std::string> arg_vector) {
+void SqrtCommand::execute(std::vector<std::string>) {
+    if (StackCalculator::stack.empty())
+        throw StackException("Not enough stack items");
+
     double argument_1 = StackCalculator::stack.top();
     StackCalculator::stack.pop();
 
     StackCalculator::stack.push(sqrt(argument_1));
-
-
 }

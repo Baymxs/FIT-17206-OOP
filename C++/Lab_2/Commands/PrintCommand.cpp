@@ -7,6 +7,7 @@
 #include "../CommandFactory.h"
 #include "../CommandCreators/PrintCommandCreator.h"
 #include "../StackCalculator.h"
+#include "../Exceptions/StackException.h"
 #include <fstream>
 #include <iostream>
 
@@ -23,6 +24,9 @@ namespace {
 }
 
 void PrintCommand::execute(std::vector<std::string>) {
+    if (StackCalculator::stack.empty())
+        throw StackException("Not enough stack items");
+
     if (StackCalculator::input_stream_name == "stdin") std::cout << StackCalculator::stack.top();
     else {
         std::ofstream output_file(StackCalculator::input_stream_name);
