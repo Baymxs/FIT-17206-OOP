@@ -21,15 +21,15 @@ namespace {
     bool state = initializePlusCommand();
 }
 
-void PlusCommand::execute(std::vector<std::string>) {
-    if (StackCalculator::stack.empty() || StackCalculator::stack.size() == 1)
+void PlusCommand::execute(std::vector<std::string>, Context &context) {
+    if (context.stack.empty() || context.stack.size() == 1)
         throw StackException("Not enough stack items");
 
-    double argument_1 = StackCalculator::stack.top();
-    StackCalculator::stack.pop();
+    double argument_1 = context.stack.top();
+    context.stack.pop();
 
-    double argument_2 = StackCalculator::stack.top();
-    StackCalculator::stack.pop();
+    double argument_2 = context.stack.top();
+    context.stack.pop();
 
-    StackCalculator::stack.push(argument_1 + argument_2);
+    context.stack.push(argument_1 + argument_2);
 }

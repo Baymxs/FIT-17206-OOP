@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include "Context.h"
 
 //Interface
 //We can't create an object of type Command
@@ -17,7 +18,7 @@ class Command {
         //Pure virtual function
         //Every child-class MUST have it's own version of the method execute() because = 0 means that virtual method
         //execute() has no body in class Command
-        virtual void execute(std::vector<std::string>) = 0;
+        virtual void execute(std::vector<std::string>, Context &context) = 0;
 };
 
 

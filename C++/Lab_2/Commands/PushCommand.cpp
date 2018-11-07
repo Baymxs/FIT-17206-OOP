@@ -24,7 +24,7 @@ namespace {
     bool state = initializePushCommand();
 }
 
-void PushCommand::execute(std::vector<std::string> arg_vector) {
+void PushCommand::execute(std::vector<std::string> arg_vector, Context &context) {
     if (arg_vector.size() != 1)
         throw ArgumentException("Invalid number of arguments");
     double arg_vector_double;
@@ -33,5 +33,5 @@ void PushCommand::execute(std::vector<std::string> arg_vector) {
     } catch (std::exception &ex) {
         throw NotNumberException("Attempting to insert an item is not a number");
     }
-    StackCalculator::stack.push(arg_vector_double);
+    context.stack.push(arg_vector_double);
 }

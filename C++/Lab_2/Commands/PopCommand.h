@@ -9,7 +9,7 @@
 
 class PopCommand : public Command {
 public:
-    void execute(std::vector<std::string> arg_vector);
+    void execute(std::vector<std::string> arg_vector, Context &context) override;
 };
 
 #endif //LAB_2_POPCOMMAND_H

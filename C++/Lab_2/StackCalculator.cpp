@@ -11,14 +11,12 @@
 #include "Command.h"
 #include "CommandFactory.h"
 
-std::stack<double> StackCalculator::stack;
-std::map<std::string, std::string> StackCalculator::define_map;
 std::string StackCalculator::input_stream_name;
 
-void check_definitions(std::vector<std::string> &arg_vector) {
-    for (int i = 0; i < arg_vector.size(); i++) {
-        auto it = StackCalculator::define_map.find(arg_vector[i]);
-        if (it != StackCalculator::define_map.end()) arg_vector[i] = it->second;
+void check_definitions(std::vector<std::string> &arg_vector, const Context &context) {
+    for (auto &i : arg_vector) {
+        auto it = context.define_map.find(i);
+        if (it != context.define_map.end()) i = it->second;
     }
 }
 
@@ -29,11 +27,12 @@ StackCalculator::StackCalculator(int argc, char* argv[]) {
 }
 
 void StackCalculator::calculate() {
-    if (input_stream_name == "stdin") _readDataFromStdin();
-    else _readDataFromFile();
+    Context context;
+    if (input_stream_name == "stdin") _readDataFromStdin(context);
+    else _readDataFromFile(context);
 }
 
-void StackCalculator::_readDataFromStdin() {
+void StackCalculator::_readDataFromStdin(Context &context) {
     std::vector<std::string> arg_vector;
     std::string command_line, word, command_name;
     bool arg_state = false;
@@ -61,8 +60,8 @@ void StackCalculator::_readDataFromStdin() {
         }
         try {
             Command *command = CommandFactory::getInstance().getCommand(command_name);
-            check_definitions(arg_vector);
-            command->execute(arg_vector);
+            check_definitions(arg_vector, context);
+            command->execute(arg_vector, context);
         } catch (std::exception &ex) {
             std::cout << "Error: " << ex.what() << std::endl;
         }
@@ -73,7 +72,7 @@ void StackCalculator::_readDataFromStdin() {
     }
 }
 
-void StackCalculator::_readDataFromFile() {
+void StackCalculator::_readDataFromFile(Context &context) {
     std::ifstream input_file(input_stream_name);
 
     std::vector<std::string> arg_vector;
@@ -100,8 +99,8 @@ void StackCalculator::_readDataFromFile() {
         }
         try {
             Command *command = CommandFactory::getInstance().getCommand(command_name);
-            check_definitions(arg_vector);
-            command->execute(arg_vector);
+            check_definitions(arg_vector, context);
+            command->execute(arg_vector, context);
         } catch (std::exception &ex) {
             std::cout << "Error: " << ex.what() << std::endl;
         }

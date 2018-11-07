@@ -22,12 +22,12 @@ namespace {
     bool state = initializePushCommand();
 }
 
-void SqrtCommand::execute(std::vector<std::string>) {
-    if (StackCalculator::stack.empty())
+void SqrtCommand::execute(std::vector<std::string>, Context &context) {
+    if (context.stack.empty())
         throw StackException("Not enough stack items");
 
-    double argument_1 = StackCalculator::stack.top();
-    StackCalculator::stack.pop();
+    double argument_1 = context.stack.top();
+    context.stack.pop();
 
-    StackCalculator::stack.push(sqrt(argument_1));
+    context.stack.push(sqrt(argument_1));
 }

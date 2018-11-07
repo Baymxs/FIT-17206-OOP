@@ -22,18 +22,18 @@ namespace {
     bool state = initializeDivisionCommand();
 }
 
-void DivisionCommand::execute(std::vector<std::string>) {
-    if (StackCalculator::stack.empty() || StackCalculator::stack.size() == 1)
+void DivisionCommand::execute(std::vector<std::string>, Context &context) {
+    if (context.stack.empty() || context.stack.size() == 1)
         throw StackException("Not enough stack items");
 
-    double argument_1 = StackCalculator::stack.top();
-    StackCalculator::stack.pop();
+    double argument_1 = context.stack.top();
+    context.stack.pop();
 
-    double argument_2 = StackCalculator::stack.top();
-    StackCalculator::stack.pop();
+    double argument_2 = context.stack.top();
+    context.stack.pop();
 
     if (argument_1 != (double) 0)
-        StackCalculator::stack.push(argument_2 / argument_1);
+        context.stack.push(argument_2 / argument_1);
     else
         throw DivisionByZeroException("Division by zero");
 }

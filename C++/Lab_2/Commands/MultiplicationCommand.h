@@ -9,7 +9,7 @@
 
 class MultiplicationCommand : public Command {
     public:
-        void execute(std::vector<std::string>) override;
+        void execute(std::vector<std::string>, Context &context) override;
 };
 
 #endif //LAB_2_MULTIPLICATIONCOMMAND_H

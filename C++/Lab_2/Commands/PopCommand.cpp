@@ -21,8 +21,8 @@ namespace {
     bool state = initializePopCommand();
 }
 
-void PopCommand::execute(std::vector<std::string>) {
-    if (StackCalculator::stack.empty())
+void PopCommand::execute(std::vector<std::string>, Context &context) {
+    if (context.stack.empty())
         throw StackException("Not enough stack items");
-    StackCalculator::stack.pop();
+    context.stack.pop();
 }

@@ -8,11 +8,10 @@
 #include <stack>
 #include <map>
 #include <string>
+#include "Context.h"
 
 class StackCalculator {
     public:
-        static std::stack<double> stack;
-        static std::map<std::string, std::string> define_map;
         static std::string input_stream_name;
 
         StackCalculator(int argc, char* argv[]);
@@ -20,8 +19,8 @@ class StackCalculator {
         void calculate();
 
     private:
-        void _readDataFromFile();
-        void _readDataFromStdin();
+        void _readDataFromFile(Context &context);
+        void _readDataFromStdin(Context &context);
 };
 
 #endif //LAB_2_STACKCALCULATOR_H

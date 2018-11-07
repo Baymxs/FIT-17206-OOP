@@ -23,13 +23,13 @@ namespace {
     bool state = initializePrintCommand();
 }
 
-void PrintCommand::execute(std::vector<std::string>) {
-    if (StackCalculator::stack.empty())
+void PrintCommand::execute(std::vector<std::string>, Context &context) {
+    if (context.stack.empty())
         throw StackException("Not enough stack items");
 
-    if (StackCalculator::input_stream_name == "stdin") std::cout << StackCalculator::stack.top();
+    if (StackCalculator::input_stream_name == "stdin") std::cout << context.stack.top() << std::endl;
     else {
         std::ofstream output_file(StackCalculator::input_stream_name);
-        output_file << "\n" << StackCalculator::stack.top();
+        output_file << "\n" << context.stack.top() << std::endl;
     }
 }

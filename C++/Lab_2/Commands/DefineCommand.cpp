@@ -22,7 +22,7 @@ namespace {
     bool state = initializeDefineCommand();
 }
 
-void DefineCommand::execute(std::vector<std::string> arg_vector) {
+void DefineCommand::execute(std::vector<std::string> arg_vector, Context &context) {
     if (arg_vector.size() != 2)
         throw ArgumentException("Invalid number of arguments");
 
@@ -30,8 +30,8 @@ void DefineCommand::execute(std::vector<std::string> arg_vector) {
 
     for (int i = 0; i < arg_vector.size(); i++) {
         if (value_state == 2) value_state = 0;
-        if (value_state == 0) StackCalculator::define_map[arg_vector[i]] = "";
-        if (value_state == 1) StackCalculator::define_map[arg_vector[i - 1]] = arg_vector[i];
+        if (value_state == 0) context.define_map[arg_vector[i]] = "";
+        if (value_state == 1) context.define_map[arg_vector[i - 1]] = arg_vector[i];
         value_state++;
     }
 }
