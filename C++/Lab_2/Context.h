@@ -15,6 +15,9 @@ class Context {
         std::map<std::string, std::string> define_map;
 
     public:
+        Context(std::ostream &ostream)
+            : output_stream(ostream) {}
+
         std::string getMapValueByKey(std::string key);
         void setMapValueByKey(std::string key, std::string value);
         std::map<std::string, std::string>::iterator findMapValueByKey(std::string key);
@@ -25,6 +28,8 @@ class Context {
         double stackTop();
         void stackPop();
         void stackPush(double value);
+
+        std::ostream &output_stream;
 };
 
 
