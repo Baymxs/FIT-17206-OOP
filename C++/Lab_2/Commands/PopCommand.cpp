@@ -22,7 +22,7 @@ namespace {
 }
 
 void PopCommand::execute(std::vector<std::string>, Context &context) {
-    if (context.stack.empty())
+    if (context.stackEmptiness())
         throw StackException("Not enough stack items");
-    context.stack.pop();
+    context.stackPop();
 }

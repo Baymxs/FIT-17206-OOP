@@ -23,11 +23,11 @@ namespace {
 }
 
 void SqrtCommand::execute(std::vector<std::string>, Context &context) {
-    if (context.stack.empty())
+    if (context.stackEmptiness())
         throw StackException("Not enough stack items");
 
-    double argument_1 = context.stack.top();
-    context.stack.pop();
+    double argument_1 = context.stackTop();
+    context.stackPop();
 
-    context.stack.push(sqrt(argument_1));
+    context.stackPush(sqrt(argument_1));
 }

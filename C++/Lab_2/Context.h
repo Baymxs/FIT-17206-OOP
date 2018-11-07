@@ -7,11 +7,24 @@
 
 #include <stack>
 #include <map>
+#include <vector>
 
 class Context {
-    public:
+    private:
         std::stack<double> stack;
         std::map<std::string, std::string> define_map;
+
+    public:
+        std::string getMapValueByKey(std::string key);
+        void setMapValueByKey(std::string key, std::string value);
+        std::map<std::string, std::string>::iterator findMapValueByKey(std::string key);
+        std::map<std::string, std::string>::iterator getEndIterator();
+
+        size_t stackSize();
+        bool stackEmptiness();
+        double stackTop();
+        void stackPop();
+        void stackPush(double value);
 };
 
 

@@ -23,17 +23,17 @@ namespace {
 }
 
 void DivisionCommand::execute(std::vector<std::string>, Context &context) {
-    if (context.stack.empty() || context.stack.size() == 1)
+    if (context.stackEmptiness() || context.stackSize() == 1)
         throw StackException("Not enough stack items");
 
-    double argument_1 = context.stack.top();
-    context.stack.pop();
+    double argument_1 = context.stackTop();
+    context.stackPop();
 
-    double argument_2 = context.stack.top();
-    context.stack.pop();
+    double argument_2 = context.stackTop();
+    context.stackPop();
 
     if (argument_1 != (double) 0)
-        context.stack.push(argument_2 / argument_1);
+        context.stackPush(argument_2 / argument_1);
     else
         throw DivisionByZeroException("Division by zero");
 }

@@ -22,14 +22,14 @@ namespace {
 }
 
 void MultiplicationCommand::execute(std::vector<std::string>, Context &context) {
-    if (context.stack.empty() || context.stack.size() == 1)
+    if (context.stackEmptiness() || context.stackSize() == 1)
         throw StackException("Not enough stack items");
 
-    double argument_1 = context.stack.top();
-    context.stack.pop();
+    double argument_1 = context.stackTop();
+    context.stackPop();
 
-    double argument_2 = context.stack.top();
-    context.stack.pop();
+    double argument_2 = context.stackTop();
+    context.stackPop();
 
-    context.stack.push(argument_1 * argument_2);
+    context.stackPush(argument_1 * argument_2);
 }

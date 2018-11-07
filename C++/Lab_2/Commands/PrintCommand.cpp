@@ -24,12 +24,12 @@ namespace {
 }
 
 void PrintCommand::execute(std::vector<std::string>, Context &context) {
-    if (context.stack.empty())
+    if (context.stackEmptiness())
         throw StackException("Not enough stack items");
 
-    if (StackCalculator::input_stream_name == "stdin") std::cout << context.stack.top() << std::endl;
+    if (StackCalculator::input_stream_name == "stdin") std::cout << context.stackTop() << std::endl;
     else {
         std::ofstream output_file(StackCalculator::input_stream_name);
-        output_file << "\n" << context.stack.top() << std::endl;
+        output_file << "\n" << context.stackTop() << std::endl;
     }
 }

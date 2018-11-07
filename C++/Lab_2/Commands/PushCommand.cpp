@@ -33,5 +33,5 @@ void PushCommand::execute(std::vector<std::string> arg_vector, Context &context)
     } catch (std::exception &ex) {
         throw NotNumberException("Attempting to insert an item is not a number");
     }
-    context.stack.push(arg_vector_double);
+    context.stackPush(arg_vector_double);
 }

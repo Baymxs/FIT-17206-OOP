@@ -13,10 +13,10 @@
 
 std::string StackCalculator::input_stream_name;
 
-void check_definitions(std::vector<std::string> &arg_vector, const Context &context) {
+void check_definitions(std::vector<std::string> &arg_vector, Context &context) {
     for (auto &i : arg_vector) {
-        auto it = context.define_map.find(i);
-        if (it != context.define_map.end()) i = it->second;
+        auto it = context.findMapValueByKey(i);
+        if (it != context.getEndIterator()) i = it->second;
     }
 }
 
