@@ -31,7 +31,9 @@ void StackCalculator::calculate() {
         parser.parseLine(command_line);
 
         try {
-            Command *command = CommandFactory::getInstance().getCommand(parser.getCommandName());
+            //We added auto_ptr, so that when you exit the block try catch or when an exceptions occurs, we were sure 
+            //that the distractor of Command object would be called
+            std::auto_ptr<Command> command(CommandFactory::getInstance().getCommand(parser.getCommandName()));
             std::vector<std::string> arguments = parser.getArguments();
             check_definitions(arguments, context);
             command->execute(arguments, context);
