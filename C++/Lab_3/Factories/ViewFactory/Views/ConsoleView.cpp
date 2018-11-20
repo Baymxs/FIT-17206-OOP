@@ -5,19 +5,24 @@
 #include "ConsoleView.h"
 #include "../ViewFactory.h"
 #include "../ViewCreators/ConsoleCreator.h"
+#include "../../WindowFactory/WindowFactory.h"
 
 //Initialize the command before running main
 //Anonymous namespace
 namespace {
     //Global function
     bool initializeConsoleView() {
-        ViewFactory::getInstance().registerViews("CONSOLE", new ConsoleCreator());
+        ViewFactory::getInstance().registerViews("Console", new ConsoleCreator());
         return true;
     }
     //Calling the global function
-    bool state = initializeConsoleView();
+    auto state = initializeConsoleView();
 }
 
-void ConsoleView::execute(std::vector<std::string>) {
+void ConsoleView::render() {
+    battleShipWindow = WindowFactory::getInstance().getView(battleShipModel->getGameStage());
+}
 
+void ConsoleView::initializeModel(BattleShipModel &battleShipModel_1) {
+    battleShipModel = &battleShipModel_1;
 }

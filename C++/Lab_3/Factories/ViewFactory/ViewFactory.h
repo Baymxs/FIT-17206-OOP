@@ -43,7 +43,7 @@ class ViewFactory {
         void registerViews(const std::string &view_name, ViewCreator *creator) {
             //We find the item from map-container "views" with "view_name" key
             auto it = views.find(view_name);
-            //If the map-container already has an item with key "name"
+            //If the map-container already has an item with key "view_name"
             if (it != views.end()) {
                 //If the value of item we found is the creator that we gave to the function as an argument return
                 if (it->second == creator) return;
@@ -52,6 +52,5 @@ class ViewFactory {
             views[view_name] = creator;
         }
 };
-
 
 #endif //LAB_3_VIEWFACTORY_H

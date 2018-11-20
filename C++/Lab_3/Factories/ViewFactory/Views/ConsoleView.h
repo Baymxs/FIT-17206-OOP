@@ -9,10 +9,17 @@
 #include <map>
 
 #include "../View.h"
+#include "../../../BattleShipModel.h"
+#include "../../WindowFactory/Window.h"
 
 class ConsoleView : public View {
-public:
-    void execute(std::vector<std::string>) override;
+    private:
+        BattleShipModel *battleShipModel = nullptr;
+        Window *battleShipWindow = nullptr;
+    public:
+        void initializeModel(BattleShipModel &battleShipModel) override;
+        void render() override;
+
 };
 
 #endif //LAB_3_CONSOLEVIEW_H

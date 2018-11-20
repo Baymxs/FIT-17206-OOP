@@ -10,6 +10,12 @@
 class BattleShipModel {
     private:
         std::string game_stage;
+    public:
+        BattleShipModel() {
+            game_stage = "menu";
+        }
+
+        std::string getGameStage() const;
 };
 
 
