@@ -6,17 +6,17 @@
 #define LAB_3_BATTLESHIPMODEL_H
 
 #include <string>
+#include <vector>
+#include "BattleShipMenuModel.h"
 
 class BattleShipModel {
     private:
-        std::string game_stage;
+        std::string game_stage = "Menu";
+        BattleShipMenuModel battleShipMenuModel;
     public:
-        BattleShipModel() {
-            game_stage = "menu";
+        std::string getGameStage() {
+            return game_stage;
         }
-
-        std::string getGameStage() const;
 };
-
 
 #endif //LAB_3_BATTLESHIPMODEL_H

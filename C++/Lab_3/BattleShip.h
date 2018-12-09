@@ -8,12 +8,16 @@
 
 #include <string>
 #include "BattleShipModel.h"
-#include "Factories/ViewFactory/View.h"
+#include "ViewFactory/View.h"
+#include "ViewFactory/Views/SFMLView/ControllerFactory/Controller.h"
+
 
 class BattleShip {
     private:
-        BattleShipModel battleShipModel;
+        BattleShipModel *battleShipModel;
+        Controller *battleShipController;
         View *battleShipView;
+
     public:
         explicit BattleShip(const std::string &game_mode);
         void startGame();
