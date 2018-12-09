@@ -34,7 +34,7 @@ class WindowFactory {
             return windowFactory;
         }
 
-        Window* getView(const std::string &window_name) {
+        Window* getWindow(const std::string &window_name) {
             auto it = windows.find(window_name);
             if (it == windows.end()) {}
             return  it->second->create();
