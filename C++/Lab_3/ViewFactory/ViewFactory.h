@@ -34,10 +34,10 @@ class ViewFactory {
             return viewFactory;
         }
 
-        View* getView(const std::string &view_name) {
-            auto it = views.find(view_name);
+        View* getView(BattleShipModel *battleShipModel) {
+            auto it = views.find(battleShipModel->getGameMode());
             if (it == views.end()) {}
-            return  it->second->create();
+            return  it->second->create(battleShipModel);
         }
 
         void registerView(const std::string &view_name, ViewCreator *creator) {

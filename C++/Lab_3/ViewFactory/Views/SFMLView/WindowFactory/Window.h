@@ -15,10 +15,17 @@
 //The methods of class SFMLWindow can have defined methods bodies
 class Window {
         private:
+            BattleShipModel *battleShipModel;
             sf::RenderWindow *main_window = nullptr;
 
         public:
+            explicit Window(BattleShipModel *battleShipModel) {
+                this->battleShipModel = battleShipModel;
+            }
 
+            BattleShipModel *getBattleShipModel() {
+                return battleShipModel;
+            }
             void setMainWindow(sf::RenderWindow *main_window) {
                     Window::main_window = main_window;
             }
@@ -27,7 +34,7 @@ class Window {
                     return main_window;
             }
 
-            virtual void render(BattleShipModel *battleShipModel) = 0;
+            virtual void render() = 0;
 };
 
 #endif //LAB_3_WINDOW_H

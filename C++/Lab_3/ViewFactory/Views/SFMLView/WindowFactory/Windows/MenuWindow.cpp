@@ -19,43 +19,75 @@ namespace {
     auto state = initializeMenuWindow();
 }
 void MenuWindow::drawBackground() {
-    sf::Texture background_texture;
-    background_texture.loadFromFile("../src/Background/menu_background.jpg");
-
-    sf::Sprite background_sprite;
-    background_sprite.setTexture(background_texture);
-
-    sf::Texture battle_ship_logo_texture;
-    battle_ship_logo_texture.loadFromFile("../src/Background/battle_ship_logo.png");
-
-    sf::Sprite battle_ship_logo_sprite;
-    battle_ship_logo_sprite.setTexture(battle_ship_logo_texture);
-    battle_ship_logo_sprite.setPosition(104, 55);
-
-    sf::Texture mode_texture;
-    mode_texture.loadFromFile("../src/Background/mode.png");
-
-    sf::Sprite mode_sprite;
-    mode_sprite.setTexture(mode_texture);
-    mode_sprite.setPosition(292, 274);
-
     getMainWindow()->draw(background_sprite);
     getMainWindow()->draw(battle_ship_logo_sprite);
     getMainWindow()->draw(mode_sprite);
 }
 
 void MenuWindow::drawButtons() {
-    startButton.draw(getMainWindow());
-    optionsButton.draw(getMainWindow());
-    leftModeSelectionButton1.draw(getMainWindow());
-    rightModeSelectionButton1.draw(getMainWindow());
-    leftModeSelectionButton2.draw(getMainWindow());
-    rightModeSelectionButton2.draw(getMainWindow());
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "start") {
+        startButton.setButtonSelectedTexture();
+    } else {
+        startButton.setButtonNormalTexture();
+    }
 
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "left_selection_button1") {
+        leftSelectionButton1.setButtonSelectedTexture();
+    } else {
+        leftSelectionButton1.setButtonNormalTexture();
+    }
+
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "right_selection_button1") {
+        rightSelectionButton1.setButtonSelectedTexture();
+    } else {
+        rightSelectionButton1.setButtonNormalTexture();
+    }
+
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "left_selection_button2") {
+        leftSelectionButton2.setButtonSelectedTexture();
+    } else {
+        leftSelectionButton2.setButtonNormalTexture();
+    }
+
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "right_selection_button2") {
+        rightSelectionButton2.setButtonSelectedTexture();
+    } else {
+        rightSelectionButton2.setButtonNormalTexture();
+    }
+
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "options") {
+        optionsButton.setButtonSelectedTexture();
+    } else {
+        optionsButton.setButtonNormalTexture();
+    }
+
+    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "exit") {
+        exitButton.setButtonSelectedTexture();
+    } else {
+        exitButton.setButtonNormalTexture();
+    }
+
+    startButton.draw(getMainWindow());
+    leftSelectionButton1.draw(getMainWindow());
+    rightSelectionButton1.draw(getMainWindow());
+    leftSelectionButton2.draw(getMainWindow());
+    rightSelectionButton2.draw(getMainWindow());
+    optionsButton.draw(getMainWindow());
+    exitButton.draw(getMainWindow());
 }
 
-void MenuWindow::render(BattleShipModel *battleShipModel) {
+void MenuWindow::drawPlayers() {
+    playerSprite1.changeSprite(getBattleShipModel()->getBattleShipMenuModel().getPlayer1());
+    playerSprite2.changeSprite(getBattleShipModel()->getBattleShipMenuModel().getPlayer2());
+
+    playerSprite1.draw(getMainWindow());
+    playerSprite2.draw(getMainWindow());
+}
+
+void MenuWindow::render() {
     drawBackground();
     drawButtons();
+    drawPlayers();
 }
+
 

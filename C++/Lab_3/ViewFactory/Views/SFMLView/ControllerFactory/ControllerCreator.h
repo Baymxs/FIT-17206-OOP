@@ -16,7 +16,7 @@ class ControllerCreator {
         //Pure virtual function
         //Every child-class MUST have it's own version of the method create() because = 0 means that virtual method
         //create() has no body in class ControllerCreator
-        virtual Controller* create() = 0;
+        virtual Controller* create(BattleShipModel *battleShipModel) = 0;
 };
 
 #endif //LAB_3_CONTROLLERCREATOR_H

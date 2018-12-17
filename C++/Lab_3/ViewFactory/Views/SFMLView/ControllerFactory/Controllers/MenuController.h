@@ -10,6 +10,7 @@
 
 class MenuController : public Controller {
     public:
+        explicit MenuController(BattleShipModel *battleShipModel) : Controller(battleShipModel) {}
         void handleEvent(sf::Event event) override;
 };
 

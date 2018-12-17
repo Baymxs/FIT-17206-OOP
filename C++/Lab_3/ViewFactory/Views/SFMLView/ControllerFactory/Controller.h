@@ -6,13 +6,23 @@
 #define LAB_3_CONTROLLER_H
 
 #include <SFML/Graphics.hpp>
+#include "../../../../BattleShipModel.h"
 
 //Interface
 //We can't create an object of type Controller
 //Class Controller do not have properties
 //The methods of class Controller have no defined methods bodies
 class Controller {
+    private:
+        BattleShipModel *battleShipModel;
     public:
+        explicit Controller(BattleShipModel *battleShipModel) {
+            this->battleShipModel = battleShipModel;
+        }
+
+        BattleShipModel *getBattleShipModel() {
+            return battleShipModel;
+        }
         //Pure virtual function
         //Every child-class MUST have it's own version of the method handleEvent() because = 0 means that virtual method
         //handleEvent() has no body in class Controller

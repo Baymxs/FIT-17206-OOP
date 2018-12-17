@@ -32,10 +32,10 @@ class ControllerFactory {
             return controllerFactory;
         }
 
-        Controller* getController(const std::string &controller_name) {
-            auto it = controllers.find(controller_name);
+        Controller* getController(BattleShipModel *battleShipModel) {
+            auto it = controllers.find(battleShipModel->getGameStage());
             if (it == controllers.end()) {}
-            return  it->second->create();
+            return  it->second->create(battleShipModel);
         }
 
         void registerController(const std::string &controller_name, ControllerCreator *creator) {

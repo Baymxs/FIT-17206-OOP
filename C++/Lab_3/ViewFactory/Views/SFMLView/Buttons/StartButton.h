@@ -10,8 +10,10 @@
 class StartButton : public Button {
     public:
         StartButton(int x, int y) {
-            getButtonTexture().loadFromFile("../src/Buttons/StartButton/Start.png");
-            getButtonSprite().setTexture(getButtonTexture());
+            getButtonNormalTexture().loadFromFile("../src/Buttons/StartButton/start.png");
+            getButtonSelectedTexture().loadFromFile("../src/Buttons/StartButton/selected_start.png");
+
+            getButtonSprite().setTexture(getButtonNormalTexture());
             getButtonSprite().setPosition(x, y);
         }
 };

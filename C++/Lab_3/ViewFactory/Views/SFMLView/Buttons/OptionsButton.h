@@ -10,8 +10,10 @@
 class OptionsButton : public Button {
     public:
         OptionsButton(int x, int y) {
-            getButtonTexture().loadFromFile("../src/Buttons/OptionsButton/Options.png");
-            getButtonSprite().setTexture(getButtonTexture());
+            getButtonNormalTexture().loadFromFile("../src/Buttons/OptionsButton/options.png");
+            getButtonSelectedTexture().loadFromFile("../src/Buttons/OptionsButton/selected_options.png");
+
+            getButtonSprite().setTexture(getButtonNormalTexture());
             getButtonSprite().setPosition(x, y);
         }
 };

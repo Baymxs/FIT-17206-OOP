@@ -13,21 +13,49 @@
 #include "../Window.h"
 #include "../../Buttons/StartButton.h"
 #include "../../Buttons/OptionsButton.h"
-#include "../../Buttons/ModeLeftSelectionButton.h"
-#include "../../Buttons/ModeRightSelectionButton.h"
+#include "../../Buttons/LeftSelectionButton.h"
+#include "../../Buttons/RightSelectionButton.h"
+#include "../../Buttons/ExitButton.h"
+#include "../../PlayerSprite.h"
 
 class MenuWindow : public Window {
     private:
+        sf::Sprite background_sprite;
+        sf::Sprite battle_ship_logo_sprite;
+        sf::Sprite mode_sprite;
+
         StartButton startButton{275, 200};
-        ModeLeftSelectionButton leftModeSelectionButton1{90, 349};
-        ModeRightSelectionButton rightModeSelectionButton1{335, 349};
-        ModeLeftSelectionButton leftModeSelectionButton2{400, 349};
-        ModeRightSelectionButton rightModeSelectionButton2{645, 349};
-        OptionsButton optionsButton{245, 419};
+        LeftSelectionButton leftSelectionButton1{60, 349};
+        RightSelectionButton rightSelectionButton1{335, 349};
+        LeftSelectionButton leftSelectionButton2{400, 349};
+        RightSelectionButton rightSelectionButton2{675, 349};
+        OptionsButton optionsButton{245, 424};
+        ExitButton exitButton{309, 496};
+
+        PlayerSprite playerSprite1{"player_selection1"};
+        PlayerSprite playerSprite2{"player_selection2"};
+
         void drawBackground();
         void drawButtons();
+        void drawPlayers();
     public:
-        void render(BattleShipModel* battleShipModel) override;
+        explicit MenuWindow(BattleShipModel *battleShipModel) : Window(battleShipModel) {
+            static sf::Texture background_texture;
+            background_texture.loadFromFile("../src/Background/menu_background.jpg");
+            background_sprite.setTexture(background_texture);
+
+            static  sf::Texture battle_ship_logo_texture;
+            battle_ship_logo_texture.loadFromFile("../src/Background/battle_ship_logo.png");
+            battle_ship_logo_sprite.setTexture(battle_ship_logo_texture);
+            battle_ship_logo_sprite.setPosition(104, 55);
+
+            static sf::Texture mode_texture;
+            mode_texture.loadFromFile("../src/Background/mode.png");
+            mode_sprite.setTexture(mode_texture);
+            mode_sprite.setPosition(292, 274);
+        }
+
+        void render() override;
 };
 
 #endif //LAB_3_MENUWINDOW_H

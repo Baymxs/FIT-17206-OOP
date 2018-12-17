@@ -19,8 +19,24 @@ namespace {
     auto state = initializeSFMLView();
 }
 
-void SFMLView::render(BattleShipModel *battleShipModel) {
-    window = WindowFactory::getInstance().getWindow(battleShipModel->getGameStage());
+void SFMLView::render() {
+    if (getBattleShipModel()->getGameStage() == "Exit") {
+        getMainWindow()->close();
+    }
+    if (getBattleShipModel()->getBattleShipMenuModel().getMusicModeChanged()) {
+        if (getBattleShipModel()->getBattleShipMenuModel().getVolumeSelection() == 2) {
+            sound.pause();
+        } else if (getBattleShipModel()->getBattleShipMenuModel().getVolumeSelection() == 1) {
+            sound.play();
+        }
+        getBattleShipModel()->getBattleShipMenuModel().setMusicModeChanged(false);
+    }
+
+    if (getBattleShipModel()->getWindowChanges()) {
+        window = WindowFactory::getInstance().getWindow(this->getBattleShipModel());
+        getBattleShipModel()->setWindowChanges(false);
+    }
+
     window->setMainWindow(&main_window);
-    window->render(battleShipModel);
+    window->render();
 }

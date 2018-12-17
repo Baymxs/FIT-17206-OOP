@@ -10,8 +10,8 @@
 #include "../Controllers/MenuController.h"
 
 class MenuControllerCreator : public ControllerCreator {
-    Controller* create() override {
-        return new MenuController();
+    Controller* create(BattleShipModel *battleShipModel) override {
+        return new MenuController(battleShipModel);
     }
 };
 

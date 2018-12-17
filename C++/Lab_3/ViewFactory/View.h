@@ -14,11 +14,21 @@
 //Class View do not have properties
 //The methods of class View have no defined methods bodies
 class View {
+    private:
+        BattleShipModel *battleShipModel;
     public:
+        explicit View(BattleShipModel *battleShipModel) {
+                this->battleShipModel = battleShipModel;
+        }
+
+        BattleShipModel *getBattleShipModel() {
+                return battleShipModel;
+        }
+
         //Pure virtual function
         //Every child-class MUST have it's own version of the method display() because = 0 means that virtual method
         //display() has no body in class View
-        virtual void render(BattleShipModel *battleShipModel) = 0;
+        virtual void render() = 0;
         virtual sf::RenderWindow* getMainWindow() = 0;
 };
 

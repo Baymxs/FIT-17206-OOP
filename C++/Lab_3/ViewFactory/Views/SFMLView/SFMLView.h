@@ -10,19 +10,30 @@
 #include "../../../BattleShipModel.h"
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 class SFMLView : public View {
     private:
         Window *window = nullptr;
         sf::RenderWindow main_window;
+        sf::SoundBuffer buffer;
+        sf::Sound sound;
     public:
-        SFMLView() {
+        explicit SFMLView(BattleShipModel *battleShipModel) : View(battleShipModel) {
             main_window.create(sf::VideoMode(800, 600), "BattleShip", sf::Style::Titlebar | sf::Style::Close);
+            main_window.setFramerateLimit(120);
+
+            buffer.loadFromFile("../src/Music/Pirates.wav");
+
+            sound.setBuffer(buffer);
+            sound.setLoop(true);
+            sound.play();
         }
         sf::RenderWindow* getMainWindow() override {
             return &main_window;
         };
-        void render(BattleShipModel*) override;
+
+        void render() override;
 };
 
 

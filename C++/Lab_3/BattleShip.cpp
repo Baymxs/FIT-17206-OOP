@@ -11,28 +11,26 @@
 
 
 BattleShip::BattleShip(const std::string &game_mode) {
-    battleShipModel = new BattleShipModel();
-    battleShipView = ViewFactory::getInstance().getView(game_mode);
-    battleShipController = ControllerFactory::getInstance().getController(battleShipModel->getGameStage());
+    battleShipModel = new BattleShipModel(game_mode);
+    battleShipView = ViewFactory::getInstance().getView(battleShipModel);
+    battleShipController = ControllerFactory::getInstance().getController(battleShipModel);
 }
 
 void BattleShip::startGame() {
-    //Run the BattleShipGame as long as the window is open
     while (battleShipView->getMainWindow()->isOpen()) {
-        //Check all the window's events that were triggered since the last iteration of the loop
-        sf::Event event{};
-        while (battleShipView->getMainWindow()->pollEvent(event)) {
-
-            battleShipController->handleEvent(event);
-
-            //"close requested" event: we close the window
-            if (event.type == sf::Event::Closed) {
-                battleShipView->getMainWindow()->close();
-            }
+        if (battleShipModel->getControllerChanges()) {
+            battleShipController = ControllerFactory::getInstance().getController(battleShipModel);
+            battleShipModel->setControllerChanges(false);
         }
 
-        battleShipView->getMainWindow()->clear(sf::Color::Red);
-        battleShipView->render(battleShipModel);
+        sf::Event event{};
+
+        while (battleShipView->getMainWindow()->pollEvent(event)) {
+            battleShipController->handleEvent(event);
+        }
+
+        battleShipView->getMainWindow()->clear(sf::Color::Blue);
+        battleShipView->render();
         battleShipView->getMainWindow()->display();
     }
 }

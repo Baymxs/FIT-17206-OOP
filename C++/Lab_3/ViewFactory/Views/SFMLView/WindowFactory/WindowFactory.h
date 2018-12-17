@@ -34,10 +34,10 @@ class WindowFactory {
             return windowFactory;
         }
 
-        Window* getWindow(const std::string &window_name) {
-            auto it = windows.find(window_name);
+        Window* getWindow(BattleShipModel *battleShipModel) {
+            auto it = windows.find(battleShipModel->getGameStage());
             if (it == windows.end()) {}
-            return  it->second->create();
+            return  it->second->create(battleShipModel);
         }
 
         void registerWindows(const std::string &window_name, WindowCreator *creator) {

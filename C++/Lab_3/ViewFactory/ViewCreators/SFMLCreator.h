@@ -10,8 +10,8 @@
 #include "../Views/SFMLView/SFMLView.h"
 
 class SFMLCreator : public ViewCreator {
-    View* create() override {
-        return new SFMLView();
+    View* create(BattleShipModel *battleShipModel) override {
+        return new SFMLView(battleShipModel);
     }
 };
 

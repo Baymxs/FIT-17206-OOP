@@ -9,14 +9,27 @@
 
 class Button {
     private:
-        sf::Texture button_texture;
+        sf::Texture button_normal_texture;
+        sf::Texture button_selected_texture;
         sf::Sprite button_sprite;
     public:
-        sf::Texture &getButtonTexture() {
-            return button_texture;
+        sf::Texture &getButtonNormalTexture() {
+            return button_normal_texture;
         }
 
-        sf::Sprite &getButtonSprite(){
+        sf::Texture &getButtonSelectedTexture() {
+            return button_selected_texture;
+        }
+
+        void setButtonNormalTexture() {
+            button_sprite.setTexture(button_normal_texture);
+        }
+
+        void setButtonSelectedTexture() {
+            button_sprite.setTexture(button_selected_texture);
+        }
+
+        sf::Sprite &getButtonSprite() {
             return button_sprite;
         }
 

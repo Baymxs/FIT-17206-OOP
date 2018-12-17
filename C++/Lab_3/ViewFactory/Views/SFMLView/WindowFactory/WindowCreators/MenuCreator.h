@@ -10,8 +10,8 @@
 #include "../Windows/MenuWindow.h"
 
 class MenuCreator : public WindowCreator {
-    Window* create() override {
-        return new MenuWindow();
+    Window* create(BattleShipModel *battleShipModel) override {
+        return new MenuWindow(battleShipModel);
     }
 };
 
