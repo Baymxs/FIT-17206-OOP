@@ -5,12 +5,10 @@
 #ifndef LAB_3_BATTLESHIP_H
 #define LAB_3_BATTLESHIP_H
 
-
 #include <string>
 #include "BattleShipModel.h"
 #include "ViewFactory/View.h"
 #include "ViewFactory/Views/SFMLView/ControllerFactory/Controller.h"
-
 
 class BattleShip {
     private:

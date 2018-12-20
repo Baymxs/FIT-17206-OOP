@@ -9,10 +9,21 @@
 
 class Button {
     private:
+        std::string button_name;
         sf::Texture button_normal_texture;
         sf::Texture button_selected_texture;
         sf::Sprite button_sprite;
+
     public:
+        Button(const std::string &button_name, const int &x, const int &y) {
+            this->button_name = button_name;
+            getButtonSprite().setPosition(x, y);
+        }
+
+        const std::string &getButtonName() const {
+            return button_name;
+        }
+
         sf::Texture &getButtonNormalTexture() {
             return button_normal_texture;
         }
@@ -33,8 +44,8 @@ class Button {
             return button_sprite;
         }
 
-        void draw(sf::RenderWindow* main_window) {
-            main_window->draw(getButtonSprite());
+        void draw(sf::RenderWindow* window) {
+            window->draw(getButtonSprite());
         };
 };
 

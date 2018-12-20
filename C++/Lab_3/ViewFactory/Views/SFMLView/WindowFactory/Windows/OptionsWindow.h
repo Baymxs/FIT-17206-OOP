@@ -10,35 +10,25 @@
 #include "../../Buttons/RightSelectionButton.h"
 #include "../../VolumeSprite.h"
 #include "../../Buttons/BackButton.h"
+#include "../../Sprites/BackgroundSprite.h"
+#include "../../Sprites/MusicModeSprite.h"
 
 class OptionsWindow : public Window{
     private:
-        sf::Sprite background_sprite;
-        sf::Sprite music_sprite;
+        std::vector<Sprite*> sprites {new BackgroundSprite(0, 0),
+                                      new MusicModeSprite(290, 130)};
 
-        BackButton backButton{10, 540};
-        LeftSelectionButton leftSelectionButton{242, 203};
-        RightSelectionButton rightSelectionButton{460, 203};
+        std::vector<Button*> buttons {new LeftSelectionButton("left_selection_button", 242, 203), new RightSelectionButton("right_selection_button", 460, 203),
+                                      new BackButton("back", 10, 540)};
 
         VolumeSprite volumeSprite;
 
-        void drawBackground();
+        void drawSprites();
         void drawButtons();
         void drawVolume();
     public:
-        explicit OptionsWindow(BattleShipModel *battleShipModel) : Window(battleShipModel) {
-            static sf::Texture background_texture;
-            background_texture.loadFromFile("../src/Background/menu_background.jpg");
-            background_sprite.setTexture(background_texture);
-
-            static sf::Texture music_texture;
-            music_texture.loadFromFile("../src/Background/music.png");
-            music_sprite.setTexture(music_texture);
-            music_sprite.setPosition(290, 130);
-
-        }
+        explicit OptionsWindow(BattleShipModel *battleShipModel) : Window(battleShipModel) {}
         void render() override;
-
 };
 
 

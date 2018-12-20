@@ -8,14 +8,13 @@
 #include "Button.h"
 
 class LeftSelectionButton : public Button {
-public:
-    LeftSelectionButton(int x, int y) {
-        getButtonNormalTexture().loadFromFile("../src/Buttons/LeftSelectionButton/left_selection.png");
-        getButtonSelectedTexture().loadFromFile("../src/Buttons/LeftSelectionButton/selected_left_selection.png");
+    public:
+        LeftSelectionButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
+            getButtonNormalTexture().loadFromFile("../src/Buttons/LeftSelectionButton/left_selection.png");
+            getButtonSelectedTexture().loadFromFile("../src/Buttons/LeftSelectionButton/selected_left_selection.png");
 
-        getButtonSprite().setTexture(getButtonNormalTexture());
-        getButtonSprite().setPosition(x, y);
-    }
+            getButtonSprite().setTexture(getButtonNormalTexture());
+        }
 };
 
 #endif //LAB_3_LEFTSELECTIONBUTTON_H

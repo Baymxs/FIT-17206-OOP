@@ -9,12 +9,11 @@
 
 class ExitButton : public Button {
     public:
-        ExitButton(int x, int y) {
+        ExitButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
             getButtonNormalTexture().loadFromFile("../src/Buttons/ExitButton/exit.png");
             getButtonSelectedTexture().loadFromFile("../src/Buttons/ExitButton/selected_exit.png");
 
             getButtonSprite().setTexture(getButtonNormalTexture());
-            getButtonSprite().setPosition(x, y);
         }
 };
 

@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.12)
+project(Lab_3)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+set(SOURCE_FILES main.cpp ViewFactory/Views/SFMLView/ControllerFactory/Controller.h ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreator.h ViewFactory/Views/SFMLView/ControllerFactory/ControllerFactory.h ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/MenuControllerCreator.h ViewFactory/Views/SFMLView/ControllerFactory/Controllers/MenuController.cpp ViewFactory/Views/SFMLView/ControllerFactory/Controllers/MenuController.h BattleShipMenuModel.h ViewFactory/Views/SFMLView/Buttons/Button.h ViewFactory/Views/SFMLView/Buttons/StartButton.h ViewFactory/Views/SFMLView/Buttons/OptionsButton.h ViewFactory/Views/SFMLView/Buttons/ExitButton.h ViewFactory/Views/SFMLView/WindowFactory/Windows/OptionsWindow.cpp ViewFactory/Views/SFMLView/WindowFactory/Windows/OptionsWindow.h ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/OptionsCreator.h ViewFactory/Views/SFMLView/ControllerFactory/Controllers/OptionsController.cpp ViewFactory/Views/SFMLView/ControllerFactory/Controllers/OptionsController.h ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/OptionsControllerCreator.h ViewFactory/Views/SFMLView/VolumeSprite.h ViewFactory/Views/SFMLView/Buttons/LeftSelectionButton.h ViewFactory/Views/SFMLView/Buttons/RightSelectionButton.h ViewFactory/Views/SFMLView/Buttons/BackButton.h ViewFactory/Views/SFMLView/Sprites/BackgroundSprite.h ViewFactory/Views/SFMLView/Sprites/LogoSprite.h ViewFactory/Views/SFMLView/Sprites/ModeSprite.h ViewFactory/Views/SFMLView/Sprites/Sprite.h ViewFactory/Views/SFMLView/Sprites/HumanSprite.h ViewFactory/Views/SFMLView/Sprites/EasyBotSprite.h ViewFactory/Views/SFMLView/Sprites/HardBotSprite.h ViewFactory/Views/SFMLView/Sprites/MusicModeSprite.h)
+add_executable(Lab_3 main.cpp BattleShip.h BattleShip.cpp BattleShipModel.h ViewFactory/ViewFactory.h ViewFactory/ViewCreator.h ViewFactory/View.h ViewFactory/Views/SFMLView/WindowFactory/WindowCreator.h ViewFactory/Views/SFMLView/WindowFactory/WindowFactory.h ViewFactory/Views/SFMLView/WindowFactory/Window.h ViewFactory/Views/SFMLView/WindowFactory/Windows/MenuWindow.cpp ViewFactory/Views/SFMLView/WindowFactory/Windows/MenuWindow.h ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/MenuCreator.h ViewFactory/Views/SFMLView/SFMLView.cpp ViewFactory/Views/SFMLView/SFMLView.h ViewFactory/ViewCreators/SFMLCreator.h ${SOURCE_FILES})
+
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
+find_package(SFML REQUIRED system window graphics network audio)
+
+if (SFML_FOUND)
+    include_directories(${SFML_INCLUDE_DIR})
+    target_link_libraries(Lab_3 ${SFML_LIBRARIES})
+endif()

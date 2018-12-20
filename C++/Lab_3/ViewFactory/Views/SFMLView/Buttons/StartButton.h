@@ -9,12 +9,11 @@
 
 class StartButton : public Button {
     public:
-        StartButton(int x, int y) {
+        StartButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
             getButtonNormalTexture().loadFromFile("../src/Buttons/StartButton/start.png");
             getButtonSelectedTexture().loadFromFile("../src/Buttons/StartButton/selected_start.png");
 
             getButtonSprite().setTexture(getButtonNormalTexture());
-            getButtonSprite().setPosition(x, y);
         }
 };
 

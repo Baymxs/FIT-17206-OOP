@@ -19,43 +19,30 @@ namespace {
     auto state = initializeOptionsWindow();
 }
 
-void OptionsWindow::drawBackground() {
-    getMainWindow()->draw(background_sprite);
-    getMainWindow()->draw(music_sprite);
+void OptionsWindow::drawSprites() {
+    for (auto sprite : sprites) {
+        sprite->draw(getMainWindow());
+    }
 }
 
 void OptionsWindow::drawButtons() {
-    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "left_selection_button") {
-        leftSelectionButton.setButtonSelectedTexture();
-    } else {
-        leftSelectionButton.setButtonNormalTexture();
+    for (auto button : buttons) {
+        if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == button->getButtonName()) {
+            button->setButtonSelectedTexture();
+        } else {
+            button->setButtonNormalTexture();
+        }
+        button->draw(getMainWindow());
     }
-
-    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "right_selection_button") {
-        rightSelectionButton.setButtonSelectedTexture();
-    } else {
-        rightSelectionButton.setButtonNormalTexture();
-    }
-
-    if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == "back_button") {
-        backButton.setButtonSelectedTexture();
-    } else {
-        backButton.setButtonNormalTexture();
-    }
-
-    leftSelectionButton.draw(getMainWindow());
-    rightSelectionButton.draw(getMainWindow());
-    backButton.draw(getMainWindow());
 }
 
 void OptionsWindow::drawVolume() {
     volumeSprite.changeSprite(getBattleShipModel()->getBattleShipMenuModel().getVolumeSelection());
-
     volumeSprite.draw(getMainWindow());
 }
 
 void OptionsWindow::render() {
-    drawBackground();
+    drawSprites();
     drawButtons();
     drawVolume();
 }
