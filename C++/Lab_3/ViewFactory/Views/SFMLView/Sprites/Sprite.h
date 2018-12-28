@@ -9,7 +9,6 @@
 
 class Sprite {
    private:
-        sf::Texture texture;
         sf::Sprite sprite;
    public:
         Sprite() = default;
@@ -17,16 +16,7 @@ class Sprite {
                 sprite.setPosition(x, y);
         }
 
-        sf::Sprite &getSprite() {
-                return sprite;
-        }
-
-        void setPosition(const int &x, const int &y) {
-            sprite.setPosition(x, y);
-        }
-
-        void setTexture(const std::string &texture_path) {
-            texture.loadFromFile(texture_path);
+        void setTexture(const sf::Texture &texture) {
             sprite.setTexture(texture);
         }
 

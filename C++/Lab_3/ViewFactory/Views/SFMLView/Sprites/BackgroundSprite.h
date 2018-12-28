@@ -5,13 +5,14 @@
 #ifndef LAB_3_BACKGROUNDSPRITE_H
 #define LAB_3_BACKGROUNDSPRITE_H
 
-#include <SFML/Graphics.hpp>
 #include "Sprite.h"
 
 class BackgroundSprite : public Sprite {
+    sf::Texture texture;
     public:
         BackgroundSprite(const int &x, const int &y) : Sprite(x, y) {
-            setTexture("../src/Background/background.jpg");
+            texture.loadFromFile("../src/Background/background.jpg");
+            setTexture(texture);
         }
 };
 

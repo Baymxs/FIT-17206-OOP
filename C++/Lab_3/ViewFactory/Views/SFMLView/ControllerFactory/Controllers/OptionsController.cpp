@@ -29,7 +29,7 @@ void OptionsController::handleEvent(sf::Event event) {
             } else if (mouse_event_X >= 462 && mouse_event_X <= 530 && mouse_event_Y >= 203 && mouse_event_Y <= 268) {
                 getBattleShipModel()->getBattleShipMenuModel().setMenuMove("right_selection_button");
             } else if (mouse_event_X >= 10 && mouse_event_X <= 176 && mouse_event_Y >= 540 && mouse_event_Y <= 590) {
-                getBattleShipModel()->getBattleShipMenuModel().setMenuMove("back_button");
+                getBattleShipModel()->getBattleShipMenuModel().setMenuMove("back");
             } else {
                 getBattleShipModel()->getBattleShipMenuModel().setMenuMove("");
             }

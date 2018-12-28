@@ -47,3 +47,12 @@ void OptionsWindow::render() {
     drawVolume();
 }
 
+OptionsWindow::~OptionsWindow() {
+    for (auto sprite : sprites) {
+        free(sprite);
+    }
+    for (auto button : buttons) {
+        free(button);
+    }
+}
+

@@ -5,13 +5,14 @@
 #ifndef LAB_3_MUSICMODESPRITE_H
 #define LAB_3_MUSICMODESPRITE_H
 
-#include <SFML/Graphics.hpp>
 #include "Sprite.h"
 
 class MusicModeSprite : public Sprite {
+    sf::Texture texture;
     public:
         MusicModeSprite(const int &x, const int &y) : Sprite(x, y) {
-            setTexture("../src/Background/music.png");
+            texture.loadFromFile("../src/Background/music.png");
+            setTexture(texture);
         }
 };
 

@@ -39,6 +39,8 @@ class MenuWindow : public Window {
         void drawPlayers();
     public:
         explicit MenuWindow(BattleShipModel *battleShipModel) : Window(battleShipModel) {}
+        virtual ~MenuWindow();
+
         void render() override;
 };
 

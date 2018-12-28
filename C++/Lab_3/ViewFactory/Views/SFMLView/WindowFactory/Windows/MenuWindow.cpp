@@ -50,4 +50,13 @@ void MenuWindow::render() {
     drawPlayers();
 }
 
+MenuWindow::~MenuWindow() {
+    for (auto sprite : sprites) {
+        free(sprite);
+    }
+    for (auto button : buttons) {
+        free(button);
+    }
+}
+
 

@@ -10,11 +10,11 @@
 class BattleShipMenuModel {
     private:
         std::string menu_move;
+
         int player1 = 1, player2 = 1;
         int volume_selection = 1;
         int music_mode_changed = false;
     public:
-
         const std::string &getMenuMove() const {
             return menu_move;
         }

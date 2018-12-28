@@ -2,7 +2,6 @@
 // Created by Bayramov Nidjat on 30.11.18.
 //
 
-#include <iostream>
 #include "MenuController.h"
 
 #include "../ControllerFactory.h"
@@ -46,7 +45,7 @@ void MenuController::handleEvent(sf::Event event) {
         case sf::Event::MouseButtonPressed:
             mouse_event_X = event.mouseButton.x, mouse_event_Y = event.mouseButton.y;
             if (mouse_event_X >= 275 && mouse_event_X <= 525 && mouse_event_Y >= 200 && mouse_event_Y <= 263) {
-                getBattleShipModel()->setGameStage("Ship Placement");
+                getBattleShipModel()->setGameStage("ShipPlacement");
             } else if (mouse_event_X >= 245 && mouse_event_X <= 525 && mouse_event_Y >= 424 && mouse_event_Y <= 486) {
                     getBattleShipModel()->setGameStage("Options");
             } else if (mouse_event_X >= 90 && mouse_event_X <= 155 && mouse_event_Y >= 349 && mouse_event_Y <= 417) {

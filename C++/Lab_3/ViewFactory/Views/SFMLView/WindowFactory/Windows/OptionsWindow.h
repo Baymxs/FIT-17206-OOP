@@ -28,7 +28,10 @@ class OptionsWindow : public Window{
         void drawVolume();
     public:
         explicit OptionsWindow(BattleShipModel *battleShipModel) : Window(battleShipModel) {}
-        void render() override;
+
+    virtual ~OptionsWindow();
+
+    void render() override;
 };
 
 

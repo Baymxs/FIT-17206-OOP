@@ -5,14 +5,14 @@
 #ifndef LAB_3_HUMANSPRITE_H
 #define LAB_3_HUMANSPRITE_H
 
-#include <SFML/Graphics.hpp>
 #include "Sprite.h"
 
 class HumanSprite : public Sprite {
+    sf::Texture texture;
     public:
-        HumanSprite() = default;
         HumanSprite(const int &x, const int &y) : Sprite(x, y) {
-                setTexture("../src/Players/human.png");
+            texture.loadFromFile("../src/Players/human.png");
+            setTexture(texture);
             }
 };
 
