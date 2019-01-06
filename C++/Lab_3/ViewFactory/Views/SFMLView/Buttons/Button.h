@@ -10,8 +10,11 @@
 class Button {
     private:
         std::string button_name;
+
+        sf::Texture button_invisible_texture;
         sf::Texture button_normal_texture;
         sf::Texture button_selected_texture;
+
         sf::Sprite button_sprite;
 
     public:
@@ -24,12 +27,20 @@ class Button {
             return button_name;
         }
 
+        sf::Texture &getButtonInvisibleTexture() {
+            return button_invisible_texture;
+        }
+
         sf::Texture &getButtonNormalTexture() {
             return button_normal_texture;
         }
 
         sf::Texture &getButtonSelectedTexture() {
             return button_selected_texture;
+        }
+
+        void setButtonInvisibleTexture() {
+            button_sprite.setTexture(button_invisible_texture);
         }
 
         void setButtonNormalTexture() {

@@ -12,8 +12,6 @@ class BackButton : public Button {
         BackButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
             getButtonNormalTexture().loadFromFile("../src/Buttons/BackButton/back.png");
             getButtonSelectedTexture().loadFromFile("../src/Buttons/BackButton/selected_back.png");
-
-            getButtonSprite().setTexture(getButtonNormalTexture());
         }
 };
 

@@ -9,19 +9,20 @@
 
 class CellSprite : public Sprite {
     private:
-        sf::Texture sea_cell;
         sf::Texture ship_cell;
+        sf::Texture marked_cell;
         sf::Texture forbidden_cell;
+        sf::Texture transparent_cell;
     public:
         CellSprite(const int &x, const int &y) : Sprite(x, y) {
-            sea_cell.loadFromFile("../src/Background/sea_cell.png");
             ship_cell.loadFromFile("../src/Background/ship_cell.png");
+            marked_cell.loadFromFile("../src/Background/marked_cell.png");
             forbidden_cell.loadFromFile("../src/Background/forbidden_cell.png");
-            setTexture(sea_cell);
+            transparent_cell.loadFromFile("../src/Background/transparent_cell.png");
         }
 
-        void setSeaCellTexture() {
-            setTexture(sea_cell);
+        void setMarkedCellTexture() {
+            setTexture(marked_cell);
         }
 
         void setShipCellTexture() {
@@ -30,6 +31,10 @@ class CellSprite : public Sprite {
 
         void setForbiddenCellTexture() {
             setTexture(forbidden_cell);
+        }
+
+        void setTransparentCellTexture() {
+            setTexture(transparent_cell);
         }
 };
 

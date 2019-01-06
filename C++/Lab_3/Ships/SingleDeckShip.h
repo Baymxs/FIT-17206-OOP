@@ -11,6 +11,8 @@ class SingleDeckShip : public Ship {
     public:
         SingleDeckShip() {
             getDecks().emplace_back(0, 0);
+
+            setNearCells();
         }
 };
 

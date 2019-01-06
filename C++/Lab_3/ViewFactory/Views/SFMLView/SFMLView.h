@@ -27,7 +27,7 @@ class SFMLView : public View {
 
             sound.setBuffer(buffer);
             sound.setLoop(true);
-            sound.play();
+           // sound.play();
         }
         sf::RenderWindow* getMainWindow() override {
             return &main_window;

@@ -12,6 +12,8 @@ class DoubleDeckShip : public Ship {
         DoubleDeckShip() {
             getDecks().emplace_back(0, 0);
             getDecks().emplace_back(1, 0);
+
+            setNearCells();
         }
 };
 

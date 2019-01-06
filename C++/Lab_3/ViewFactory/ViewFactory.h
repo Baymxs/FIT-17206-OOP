@@ -18,7 +18,7 @@ class ViewFactory {
         //We can't use "new" keyword
         ViewFactory() = default;
 
-        //Create a container "map" that stores views.
+        //Create a container "map" that stores ViewCreators.
         std::map<std::string, ViewCreator*> views;
 
     public:

@@ -14,6 +14,8 @@ class FourDeckShip : public Ship {
             getDecks().emplace_back(1, 0);
             getDecks().emplace_back(2, 0);
             getDecks().emplace_back(3, 0);
+
+                setNearCells();
         }
 };
 

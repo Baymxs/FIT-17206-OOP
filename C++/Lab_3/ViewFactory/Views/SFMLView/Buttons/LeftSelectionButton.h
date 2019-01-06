@@ -1,3 +1,4 @@
+
 //
 // Created by Bayramov Nidjat on 18.12.18.
 //
@@ -12,6 +13,7 @@ class LeftSelectionButton : public Button {
         LeftSelectionButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
             getButtonNormalTexture().loadFromFile("../src/Buttons/LeftSelectionButton/left_selection.png");
             getButtonSelectedTexture().loadFromFile("../src/Buttons/LeftSelectionButton/selected_left_selection.png");
+            getButtonInvisibleTexture().loadFromFile("../src/Buttons/LeftSelectionButton/invisible_left_selection.png");
 
             getButtonSprite().setTexture(getButtonNormalTexture());
         }

@@ -13,6 +13,8 @@ class ThreeDeckShip : public Ship {
             getDecks().emplace_back(0, 0);
             getDecks().emplace_back(1, 0);
             getDecks().emplace_back(2, 0);
+
+            setNearCells();
         }
 };
 

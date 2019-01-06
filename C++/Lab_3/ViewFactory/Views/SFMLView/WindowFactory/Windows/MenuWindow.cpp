@@ -26,19 +26,21 @@ void MenuWindow::drawSprites() {
 }
 
 void MenuWindow::drawButtons() {
-    for (auto button : buttons) {
-        if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == button->getButtonName()) {
-            button->setButtonSelectedTexture();
+    for (int i = 0; i < buttons.size(); i++) {
+        if (getBattleShipModel()->isGameStarted() && (i == 1 || i == 2 || i == 3 || i == 4)) {
+            buttons[i]->setButtonInvisibleTexture();
+        } else if (getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == buttons[i]->getButtonName()) {
+            buttons[i]->setButtonSelectedTexture();
         } else {
-            button->setButtonNormalTexture();
+            buttons[i]->setButtonNormalTexture();
         }
-        button->draw(getMainWindow());
+        buttons[i]->draw(getMainWindow());
     }
 }
 
 void MenuWindow::drawPlayers() {
-    playerSprite1.changeSprite(getBattleShipModel()->getBattleShipMenuModel().getPlayer1());
-    playerSprite2.changeSprite(getBattleShipModel()->getBattleShipMenuModel().getPlayer2());
+    playerSprite1.changeSprite(getBattleShipModel()->getPlayer1());
+    playerSprite2.changeSprite(getBattleShipModel()->getPlayer2());
 
     playerSprite1.draw(getMainWindow());
     playerSprite2.draw(getMainWindow());

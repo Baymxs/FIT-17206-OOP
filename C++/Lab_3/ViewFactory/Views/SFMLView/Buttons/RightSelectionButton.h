@@ -12,6 +12,7 @@ class RightSelectionButton : public Button {
         RightSelectionButton(const std::string &button_name, const int &x, const int &y) : Button(button_name, x, y) {
             getButtonNormalTexture().loadFromFile("../src/Buttons/RightSelectionButton/right_selection.png");
             getButtonSelectedTexture().loadFromFile("../src/Buttons/RightSelectionButton/selected_right_selection.png");
+            getButtonInvisibleTexture().loadFromFile("../src/Buttons/RightSelectionButton/invisible_right_selection.png");
 
             getButtonSprite().setTexture(getButtonNormalTexture());
         }

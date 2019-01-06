@@ -11,10 +11,10 @@ class BattleFieldSprite {
     private:
         std::vector<CellSprite*> battle_filed;
     public:
-        BattleFieldSprite() {
+        BattleFieldSprite(int x, int y) {
             for (int i = 0; i < 10; i++) {
                 for (int j = 0; j < 10; j++) {
-                    battle_filed.push_back(new CellSprite(197 + (42 * j), 80 + (42 * i)));
+                    battle_filed.push_back(new CellSprite(x + (42 * j), y + (42 * i)));
                 }
             }
         }
@@ -25,8 +25,10 @@ class BattleFieldSprite {
             }
         }
 
-        void setSeaCellTexture(int i, int j) {
-            battle_filed[10*j + i]->setSeaCellTexture();
+        void setMarkedCellTexture(int i, int j) {
+            if (i >= 0 && j >= 0) {
+                battle_filed[10 * j + i]->setMarkedCellTexture();
+            }
         }
 
         void setShipCellTexture(int i, int j) {
@@ -35,6 +37,10 @@ class BattleFieldSprite {
 
         void setForbiddenCellTexture(int i, int j) {
             battle_filed[10*j + i]->setForbiddenCellTexture();
+        }
+
+        void setTransparentCellTexture(int i, int j) {
+            battle_filed[10*j + i]->setTransparentCellTexture();
         }
 
 };

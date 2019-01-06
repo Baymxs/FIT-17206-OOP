@@ -9,10 +9,6 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
-//Interface
-//We can't create an object of type View
-//Class View do not have properties
-//The methods of class View have no defined methods bodies
 class View {
     private:
         BattleShipModel *battleShipModel;
@@ -27,7 +23,7 @@ class View {
 
         //Pure virtual function
         //Every child-class MUST have it's own version of the method display() because = 0 means that virtual method
-        //display() has no body in class View
+        //render() has no body in class View
         virtual void render() = 0;
         virtual sf::RenderWindow* getMainWindow() = 0;
 };

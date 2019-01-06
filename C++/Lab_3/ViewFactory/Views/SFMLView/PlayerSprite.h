@@ -23,6 +23,21 @@ class PlayerSprite {
             hard_bot_texture.loadFromFile("../src/Players/hard_bot.png");
         }
 
+        explicit PlayerSprite(int player, int x, int y) {
+            this->player_selection = "";
+            if (player == 1) {
+                human_texture.loadFromFile("../src/Players/human.png");
+                player_sprite.setTexture(human_texture);
+            } else if (player == 2) {
+                easy_bot_texture.loadFromFile("../src/Players/easy_bot.png");
+                player_sprite.setTexture(easy_bot_texture);
+            } else if (player == 3) {
+                hard_bot_texture.loadFromFile("../src/Players/hard_bot.png");
+                player_sprite.setTexture(hard_bot_texture);
+            }
+            player_sprite.setPosition(x, y);
+        }
+
         void changeSprite(int player_number) {
             if (player_selection == "player_selection1") {
                 if (player_number == 1) {
@@ -55,9 +70,9 @@ class PlayerSprite {
             }
         }
 
-        void draw(sf::RenderWindow *main_window) {
-            main_window->draw(player_sprite);
-        }
+    void draw(sf::RenderWindow* window) {
+        window->draw(player_sprite);
+    }
 };
 
 #endif //LAB_3_PLAYERSPRITE_H
