@@ -47,6 +47,44 @@ class Ship {
             return _near_cells;
         }
 
+        bool isDeck(int x, int y) {
+            for (auto &_deck : _decks) {
+                if (x == _deck.first && y == _deck.second) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void setNearCells() {
+            getNearCells().clear();
+
+            if (!getDecks().empty()) {
+                int x = getDecks()[0].first - 1;
+                int y = getDecks()[0].second - 1;
+
+                getNearCells().clear();
+
+                if (getRotation() == "horizontal") {
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < getDecks().size() + 2; j++) {
+                            if (!isDeck(x + j, y + i)) {
+                                getNearCells().emplace_back(x + j, y + i);
+                            }
+                        }
+                    }
+                } else if (getRotation() == "vertical") {
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < getDecks().size() + 2; j++) {
+                            if (!isDeck(x + i, y + j)) {
+                                getNearCells().emplace_back(x + i, y + j);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         void setLocationState(bool location_state) {
             _is_located = location_state;
         }
@@ -63,6 +101,10 @@ class Ship {
                     _decks[i].first = _decks[0].first + i;
                 }
             }
+        }
+
+        void setVerticalRotationName() {
+            _rotation = "vertical";
         }
 
         void setVerticalRotation() {
@@ -196,40 +238,6 @@ class Ship {
             if (upNCellsShearPossibility()) {
                 for (auto &cell : _near_cells) {
                     cell.second = cell.second - 1;
-                }
-            }
-        }
-
-        bool isDeck(int x, int y) {
-            for (auto &_deck : _decks) {
-                if (x == _deck.first && y == _deck.second) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        void setNearCells() {
-            int x = getDecks()[0].first - 1;
-            int y = getDecks()[0].second - 1;
-
-            getNearCells().clear();
-
-            if (getRotation() == "horizontal") {
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < getDecks().size() + 2; j++) {
-                        if (!isDeck(x + j, y + i)) {
-                            getNearCells().emplace_back(x + j, y + i);
-                        }
-                    }
-                }
-            } else if (getRotation() == "vertical") {
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < getDecks().size() + 2; j++) {
-                        if (!isDeck(x + i, y + j)) {
-                            getNearCells().emplace_back(x + i, y + j);
-                        }
-                    }
                 }
             }
         }

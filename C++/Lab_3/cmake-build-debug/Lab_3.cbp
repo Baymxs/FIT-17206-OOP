@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Lab_3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Lab_3">
+				<Option output="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Lab_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/7.0.2/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Lab_3/fast">
+				<Option output="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Lab_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/7.0.2/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/BattleShip.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/BattleShip.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/BattleShipMenuModel.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/BattleShipModel.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/Player.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/PlayerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/PlayerCreators/HumanPlayerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/PlayerFactory.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/Players/HumanPlayer.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/PlayerFactory/Players/HumanPlayer.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/RandomPlacement.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/Ships/DoubleDeckShip.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/Ships/FourDeckShip.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/Ships/Ship.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/Ships/SingleDeckShip.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/Ships/ThreeDeckShip.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/View.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/ViewCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/ViewCreators/SFMLCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/ViewFactory.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/BackButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/BattleButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/Button.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/ExitButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/LeftSelectionButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/NextButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/OptionsButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/RandomButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/RightSelectionButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Buttons/StartButton.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controller.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/MenuControllerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/OptionsControllerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/Player1PlacementControllerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerCreators/Player2PlacementControllerCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/ControllerFactory.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/MenuController.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/MenuController.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/OptionsController.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/OptionsController.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/Player1PlacementController.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/Player1PlacementController.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/Player2PlacementController.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/ControllerFactory/Controllers/Player2PlacementController.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/SFMLView.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/SFMLView.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/BackgroundSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/BattleFieldSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/CellSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/EasyBotSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/HardBotSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/HumanSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/LogoSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/ModeSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/MusicModeSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/Ships/FourDeckShipSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/Ships/OneDeckShipSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/Ships/ThreeDeckShipSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/Ships/TwoDeckShipSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Sprites/Sprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/Texts/ShipCountText.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/VolumeSprite.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Window.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/MenuCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/OptionsCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/Player1PlacementCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowCreators/Player2PlacementCreator.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/WindowFactory.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/MenuWindow.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/MenuWindow.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/OptionsWindow.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/OptionsWindow.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/Player1PlacementWindow.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/Player1PlacementWindow.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/Player2PlacementWindow.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/ViewFactory/Views/SFMLView/WindowFactory/Windows/Player2PlacementWindow.h">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/main.cpp">
+			<Option target="Lab_3"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_3/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -27,7 +27,19 @@ void Player1PlacementController::handleEvent(sf::Event event) {
                 if (event.key.code == sf::Keyboard::Return) {
                     if (getBattleShipModel()->getPlayer1Ships()[getBattleShipModel()->getCurrentShip()]->getAvailabilityState()) {
                         getBattleShipModel()->getPlayer1Ships()[getBattleShipModel()->getCurrentShip()]->setLocationState(true);
+                        if (getBattleShipModel()->getCurrentShip() >= 0 &&
+                            getBattleShipModel()->getCurrentShip() <= 3) {
+                            getBattleShipModel()->getShipsCount()[0]--;
+                        } else if (getBattleShipModel()->getCurrentShip() >= 4 &&
+                                   getBattleShipModel()->getCurrentShip() <= 6) {
+                            getBattleShipModel()->getShipsCount()[1]--;
+                        } else if (getBattleShipModel()->getCurrentShip() >= 7 &&
+                                   getBattleShipModel()->getCurrentShip() <= 8) {
+                            getBattleShipModel()->getShipsCount()[2]--;
+                        }
+
                         if (getBattleShipModel()->getCurrentShip() == 9) {
+                            getBattleShipModel()->getShipsCount()[3]--;
                             getBattleShipModel()->setPlayer1Choice(false);
                             getBattleShipModel()->setCurrentShip(0);
                         } else {
@@ -66,6 +78,8 @@ void Player1PlacementController::handleEvent(sf::Event event) {
                 getBattleShipModel()->getBattleShipMenuModel().setMenuMove("back");
             } else if (mouse_event_X >= 624 && mouse_event_X <= 785 && mouse_event_Y >= 540 && mouse_event_Y <= 590) {
                 getBattleShipModel()->getBattleShipMenuModel().setMenuMove("next");
+            } else if (mouse_event_X >= 37 && mouse_event_X <= 271 && mouse_event_Y >= 285 && mouse_event_Y <= 320) {
+                getBattleShipModel()->getBattleShipMenuModel().setMenuMove("random");
             } else {
                 getBattleShipModel()->getBattleShipMenuModel().setMenuMove("");
             }
@@ -79,6 +93,8 @@ void Player1PlacementController::handleEvent(sf::Event event) {
                     getBattleShipModel()->setGameStage("Player2Placement");
                     getBattleShipModel()->setPlayer2Choice(true);
                 }
+            } else if (mouse_event_X >= 37 && mouse_event_X <= 271 && mouse_event_Y >= 285 && mouse_event_Y <= 320) {
+                getBattleShipModel()->setRandomShipPlacement();
             }
             break;
         default:

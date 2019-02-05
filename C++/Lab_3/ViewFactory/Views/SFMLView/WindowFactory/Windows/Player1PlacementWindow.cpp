@@ -23,17 +23,16 @@ void Player1PlacementWindow::drawSprites() {
     for (auto sprite : sprites) {
         sprite->draw(getMainWindow());
     }
-
     playerSprite.draw(getMainWindow());
 }
 
 void Player1PlacementWindow::drawButtons() {
     for (int i = 0; i < buttons.size(); i++) {
-        if (i == 0 && getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == buttons[i]->getButtonName()) {
+        if ((i == 0 || i == 2) && getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == buttons[i]->getButtonName()) {
             buttons[i]->setButtonSelectedTexture();
         } else if (!getBattleShipModel()->isPlayer1Choice() && getBattleShipModel()->getBattleShipMenuModel().getMenuMove() == buttons[i]->getButtonName()) {
             buttons[i]->setButtonSelectedTexture();
-        } else if (getBattleShipModel()->isPlayer1Choice() && i) {
+        } else if (getBattleShipModel()->isPlayer1Choice() && (i == 1)) {
             buttons[i]->setButtonInvisibleTexture();
         } else {
             buttons[i]->setButtonNormalTexture();
@@ -43,6 +42,14 @@ void Player1PlacementWindow::drawButtons() {
 }
 
 void Player1PlacementWindow::drawBattleField() {
+    if (!getBattleShipModel()->isPlayer1Choice()) {
+
+    }
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            battleFieldSprite.setTransparentCellTexture(i, j);
+        }
+    }
     for (auto i : getBattleShipModel()->getPlayer1Ships()) {
         if (i->getLocationState()) {
             for (auto deck : i->getDecks()) {
@@ -78,9 +85,17 @@ void Player1PlacementWindow::drawShip() {
     shipBattleFieldSprite.drawBattleField(getMainWindow());
 }
 
+void Player1PlacementWindow::drawText() {
+    for (auto text : shipsCount) {
+        text->draw(getMainWindow());
+    }
+}
+
 void Player1PlacementWindow::render() {
     drawSprites();
     drawButtons();
     drawBattleField();
     drawShip();
+    drawText();
+
 }

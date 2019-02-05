@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_4/CSVParser.h
+tuple
+-
+fstream
+-
+vector
+-
+sstream
+-
+iostream
+-
+TuplePrinter.h
+/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_4/TuplePrinter.h
+
+/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_4/TuplePrinter.h
+cstdio
+-
+iostream
+-
+
+/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_4/main.cpp
+iostream
+-
+fstream
+-
+CSVParser.h
+/Users/BaySev/Desktop/NSU/OOP/FIT-17206-OOP-Labs/C++/Lab_4/CSVParser.h
+

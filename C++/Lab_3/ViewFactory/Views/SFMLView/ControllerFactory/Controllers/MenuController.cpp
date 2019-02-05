@@ -51,7 +51,7 @@ void MenuController::handleEvent(sf::Event event) {
                 getBattleShipModel()->setGameStartedState(true);
                 if (getBattleShipModel()->isPlayer1Choice()) {
                     getBattleShipModel()->setGameStage("Player1Placement");
-                } else if (getBattleShipModel()->isPlayer1Choice()) {
+                } else if (getBattleShipModel()->isPlayer2Choice()) {
                     getBattleShipModel()->setGameStage("Player2Placement");
                 } else if (getBattleShipModel()->isAllShipsAreLocated1() && !getBattleShipModel()->isAllShipsAreLocated2()) {
                     getBattleShipModel()->setGameStage("Player1Placement");
