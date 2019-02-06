@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.List;
 import java.util.Map;
 
 class CSVCreator {
@@ -17,8 +18,14 @@ class CSVCreator {
 
             Parser parser = new Parser();
 
+            List<Map.Entry<String, Integer>> CSVList = parser.getCSVData(inputFileName);
+
             for (Map.Entry<String, Integer> entry : parser.getCSVData(inputFileName)) {
                 fileWriter.write(entry.getKey() + ";" + entry.getValue() + ";" + (float)entry.getValue()/parser.getWordCount() + "%" + "\n");
+            }
+
+            for (int i = CSVList.size() - 1; i >= 0; i--) {
+                fileWriter.write(CSVList.get(i).getKey() + ";" + CSVList.get(i).getValue() + ";" + (float)CSVList.get(i).getValue()/parser.getWordCount() + "%" + "\n");
             }
         }
         catch (IOException e) {
