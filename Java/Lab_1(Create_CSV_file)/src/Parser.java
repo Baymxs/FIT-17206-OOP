@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-class Parser {
+public class Parser implements ReadFile{
     private Map<String, Integer> _CSV_map;
     private int _word_count;
 
@@ -14,16 +14,8 @@ class Parser {
         return _word_count;
     }
 
-    List<Map.Entry<String, Integer>> getCSVData(String fileName) {
-        parseFile(readFromFile(fileName));
-
-        List<Map.Entry<String, Integer>> list = new ArrayList<>(_CSV_map.entrySet());
-        list.sort(Map.Entry.comparingByValue());
-
-        return list;
-    }
-
-    StringBuilder readFromFile(String fileName) {
+    @Override
+    public StringBuilder readFile(String fileName) {
         BufferedReader reader = null;
         final StringBuilder fileData = new StringBuilder();
 
@@ -51,8 +43,18 @@ class Parser {
         return fileData;
     }
 
+    List<Map.Entry<String, Integer>> getCSVData(String fileName) {
+        parseFile(readFile(fileName));
+
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(_CSV_map.entrySet());
+        list.sort(Map.Entry.comparingByValue());
+
+        return list;
+    }
+
     void parseFile(StringBuilder fileData) {
         StringBuilder word = new StringBuilder();
+
         for (char smb : fileData.toString().toCharArray()) {
             if (Character.isLetterOrDigit(smb)) {
                 word.append(smb);
