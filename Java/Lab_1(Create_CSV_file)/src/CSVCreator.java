@@ -42,7 +42,9 @@ class CSVCreator implements WriteFile{
             stringBuilder.append(CSVList.get(i).getKey());
             stringBuilder.append(";");
             stringBuilder.append(CSVList.get(i).getValue());
-            stringBuilder.append((float)CSVList.get(i).getValue()/parser.getWordCount());
+            stringBuilder.append(" ");
+            float percent = (float)CSVList.get(i).getValue()/parser.getWordCount() * 100;
+            stringBuilder.append(percent);
             stringBuilder.append("%");
             stringBuilder.append("\n");
         }
