@@ -1,2 +1,2 @@
-World;1 50.0%
-Hello;1 50.0%
+World,1,50.0
+Hello,1,50.0
