@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.*;
 
 class CSVCreator {
     private StreamWriter streamWriter;
@@ -17,14 +16,22 @@ class CSVCreator {
     }
 
     private List<Map.Entry<String, Integer>> createCSVData() {
-        String word;
-        while (!(word = parser.getWord()).equals("")) {
-            if (CSVMap.containsKey(word)) {
-                CSVMap.put(word, CSVMap.get(word) + 1);
-            } else {
-                CSVMap.put(word, 1);
+        StringBuilder word = new StringBuilder();
+        while (true) {
+            try {
+                if ((parser.getWord(word) == -1)) break;
+            } catch (IOException e) {
+                System.out.println("data reading error");
             }
-            wordCount++;
+            if (word.length() != 0) {
+                if (CSVMap.containsKey(word.toString())) {
+                    CSVMap.put(word.toString(), CSVMap.get(word.toString()) + 1);
+                } else {
+                    CSVMap.put(word.toString(), 1);
+                }
+                wordCount++;
+                word.delete(0, word.length());
+            }
         }
 
         List<Map.Entry<String, Integer>> CSVList = new ArrayList<>(CSVMap.entrySet());
@@ -33,21 +40,23 @@ class CSVCreator {
         return CSVList;
     }
 
-    public void printCSVData() {
+    public void writeCSVData() {
         List<Map.Entry<String, Integer>> CSVList = createCSVData();
-        StringBuilder CSVData = new StringBuilder();
 
+        ArrayList<String> CSVLine = new ArrayList<>();
 
         for (int i = CSVList.size() - 1; i >= 0; i--) {
-            CSVData.append(CSVList.get(i).getKey());
-            CSVData.append(",");
-            CSVData.append(CSVList.get(i).getValue());
-            CSVData.append(",");
-            float percent = (float)CSVList.get(i).getValue()/wordCount * 100;
-            CSVData.append(percent);
-            CSVData.append("\n");
-        }
+            CSVLine.add(CSVList.get(i).getKey());
+            CSVLine.add(CSVList.get(i).getValue() + "");
+            CSVLine.add(((float)CSVList.get(i).getValue()/wordCount)*100 + "");
 
-        streamWriter.write(CSVData);
+            try {
+                streamWriter.write(CSVLine);
+            } catch (IOException e) {
+                System.err.println("error writing CSV Data");
+            }
+
+            CSVLine.clear();
+        }
     }
 }

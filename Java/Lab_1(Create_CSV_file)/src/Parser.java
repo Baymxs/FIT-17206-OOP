@@ -10,22 +10,19 @@ public class Parser {
         bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
     }
 
-    public String getWord() {
+    public int getWord(StringBuilder word) throws IOException {
         boolean isCorrectValue = true;
-        StringBuilder word = new StringBuilder();
-        char value;
+        int value = -1;
 
         while (isCorrectValue) {
-            try {
-                value = (char) bufferedReader.read();
+            value = bufferedReader.read();
 
-                if (Character.isLetterOrDigit(value)) {
-                    word.append(value);
-                } else isCorrectValue = false;
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (Character.isLetterOrDigit((char)value)) {
+                word.append((char) value);
+            } else {
+                isCorrectValue = false;
             }
         }
-        return word.toString();
+        return value;
     }
 }
