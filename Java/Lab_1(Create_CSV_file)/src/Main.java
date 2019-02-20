@@ -12,7 +12,19 @@ public class Main {
             System.err.println("Error opening data file");
         }
 
-        CSVCreator CSVCreator = new CSVCreator(new Parser(fileInputStream), new UFileWriter(args[1]));
-        CSVCreator.writeCSVData();
+        CSVCreator CSVCreator = null;
+        try {
+            CSVCreator = new CSVCreator(new Parser(fileInputStream), new UFileWriter(args[1]));
+        } catch (IOException e) {
+            System.out.println("error opening file");
+        }
+
+        try {
+            if (CSVCreator != null) {
+                CSVCreator.writeCSVData();
+            }
+        } catch (IOException | NullPointerException e) {
+            System.err.println("Error writing CSV Data");
+        }
     }
 }

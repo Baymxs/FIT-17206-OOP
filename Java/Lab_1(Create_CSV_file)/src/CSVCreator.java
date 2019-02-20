@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 class CSVCreator {
@@ -15,14 +14,10 @@ class CSVCreator {
         wordCount = 0;
     }
 
-    private List<Map.Entry<String, Integer>> createCSVData() {
+    private List<Map.Entry<String, Integer>> createCSVData() throws IOException  {
         StringBuilder word = new StringBuilder();
-        while (true) {
-            try {
-                if ((parser.getWord(word) == -1)) break;
-            } catch (IOException e) {
-                System.out.println("data reading error");
-            }
+        while ((parser.getWord(word) != -1)) {
+            System.out.println("data reading error");
             if (word.length() != 0) {
                 if (CSVMap.containsKey(word.toString())) {
                     CSVMap.put(word.toString(), CSVMap.get(word.toString()) + 1);
@@ -40,7 +35,7 @@ class CSVCreator {
         return CSVList;
     }
 
-    public void writeCSVData() {
+    public void writeCSVData() throws IOException{
         List<Map.Entry<String, Integer>> CSVList = createCSVData();
 
         ArrayList<String> CSVLine = new ArrayList<>();
@@ -50,11 +45,7 @@ class CSVCreator {
             CSVLine.add(CSVList.get(i).getValue() + "");
             CSVLine.add(((float)CSVList.get(i).getValue()/wordCount)*100 + "");
 
-            try {
-                streamWriter.write(CSVLine);
-            } catch (IOException e) {
-                System.err.println("error writing CSV Data");
-            }
+            streamWriter.write(CSVLine);
 
             CSVLine.clear();
         }

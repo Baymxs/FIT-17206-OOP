@@ -1,6 +1,6 @@
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public interface StreamWriter {
-    void write(ArrayList<String> CSVLine) throws IOException;
+    void write(List<String> CSVLine) throws IOException;
 }
