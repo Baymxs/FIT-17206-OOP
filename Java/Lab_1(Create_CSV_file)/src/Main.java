@@ -7,24 +7,13 @@ public class Main {
         FileInputStream fileInputStream = null;
 
         try {
-            fileInputStream = new FileInputStream(args[0]);
-        } catch (FileNotFoundException e) {
-            System.err.println("Error opening data file");
-        }
+            fileInputStream = new FileInputStream("wqerr");
 
-        CSVCreator CSVCreator = null;
-        try {
-            CSVCreator = new CSVCreator(new Parser(fileInputStream), new UFileWriter(args[1]));
+            CSVCreator CSVCreator = new CSVCreator(new Parser(fileInputStream), new UFileWriter(args[1]));
+            CSVCreator.writeCSVData();
         } catch (IOException e) {
-            System.out.println("error opening file");
-        }
-
-        try {
-            if (CSVCreator != null) {
-                CSVCreator.writeCSVData();
-            }
-        } catch (IOException | NullPointerException e) {
-            System.err.println("Error writing CSV Data");
+            e.printStackTrace();
+            System.err.println("Error creating CSV Data: " + e);
         }
     }
 }

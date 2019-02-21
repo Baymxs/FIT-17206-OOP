@@ -15,6 +15,6 @@ public class UFileWriter implements StreamWriter {
     @Override
     public void write(List<String> CSVLine) throws IOException {
         String result_CSV_line = String.join(separator, CSVLine);
-        fileWriter.write(result_CSV_line + "\n");
+        fileWriter.write(result_CSV_line + System.lineSeparator());
     }
 }
