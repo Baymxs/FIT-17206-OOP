@@ -1,0 +1,6 @@
+desc
+1 = readfile input.txt
+2 = writefile output.txt
+10 = replace Fred Tom
+csed
+1 -> 10 -> 2
