@@ -1,17 +1,11 @@
-package Blocks.Blocks;
+package BlocksFactory.Blocks;
 
-import Blocks.Block;
-import Blocks.BlockCreators.WriteFileCreator;
-import Blocks.BlockFactory;
+import BlocksFactory.Block;
 
 import java.io.*;
 import java.util.List;
 
 public class WriteFileBlock extends Block {
-    static {
-        BlockFactory.getInstance().registerBlock("WriteFile", new WriteFileCreator());
-    }
-
     public WriteFileBlock(int id, String name, List<String> arguments) {
         super(id, name, arguments);
     }

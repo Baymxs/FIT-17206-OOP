@@ -1,11 +1,9 @@
-import Blocks.Block;
-import Blocks.BlockFactory;
-import Exceptions.IncorrectWorkflowException;
+import BlocksFactory.Block;
+import BlocksFactory.BlockFactory;
+import Exceptions.BlockNotFoundException;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class WFExecutor {
@@ -19,11 +17,9 @@ public class WFExecutor {
         executionOrder = new ArrayList<>();
     }
 
-    public void checkWorkflow() throws IncorrectWorkflowException {
-
-    }
-
-    private void parseBlock(String line) {
+    private void parseBlock(String line)
+            throws IOException, NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException
+    {
         int blockId;
         String blockName;
         List<String> blockArgsList = null;
@@ -48,22 +44,35 @@ public class WFExecutor {
         }
     }
 
-    private void readWorkflow() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+    private void readWorkflow()
+            throws NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException, IOException {
+        BufferedReader bufferedReader = null;
 
         boolean blocks_parsing = false, execute_order_parsing = false;
         String line;
 
-        while ((line = bufferedReader.readLine()) != null) {
-            if (line.equals("desc")) {
-                blocks_parsing = true;
-            } else if (line.equals("csed")) {
-                blocks_parsing = false;
-                execute_order_parsing = true;
-            } else if (blocks_parsing) {
-                parseBlock(line);
-            } else if (execute_order_parsing) {
-                parseExecutionOrder(line);
+        try {
+            bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.equals("desc")) {
+                    blocks_parsing = true;
+                } else if (line.equals("csed")) {
+                    blocks_parsing = false;
+                    execute_order_parsing = true;
+                } else if (blocks_parsing) {
+                    parseBlock(line);
+                } else if (execute_order_parsing) {
+                    parseExecutionOrder(line);
+                }
+            }
+        } finally {
+            try {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+            } catch (IOException e) {
+                System.out.println("error closing file");
             }
         }
     }
@@ -78,8 +87,8 @@ public class WFExecutor {
         return block;
     }
 
-    public void execute() throws IOException, IncorrectWorkflowException {
-        checkWorkflow();
+    public void execute()
+            throws NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException, IOException {
         StringBuilder text = new StringBuilder();
         Block block;
 

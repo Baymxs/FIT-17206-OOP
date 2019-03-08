@@ -1,11 +1,12 @@
+import Exceptions.ProgramArgException;
+
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ProgramArgException {
         if (args.length != 1) {
-            throw new RuntimeException("invalid number of arguments");
+            throw new ProgramArgException("invalid number of program arguments");
         }
 
         try {
@@ -13,9 +14,8 @@ public class Main {
 
             WFExecutor wfExecutor = new WFExecutor(inputStream);
             wfExecutor.execute();
-        } catch (IOException ex) {
-            System.err.println("error opening file");
-            ex.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
         }
     }
 }

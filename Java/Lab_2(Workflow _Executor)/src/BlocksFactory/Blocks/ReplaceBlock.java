@@ -1,16 +1,10 @@
-package Blocks.Blocks;
+package BlocksFactory.Blocks;
 
-import Blocks.Block;
-import Blocks.BlockCreators.ReplaceCreator;
-import Blocks.BlockFactory;
+import BlocksFactory.Block;
 
 import java.util.List;
 
 public class ReplaceBlock extends Block {
-    static {
-        BlockFactory.getInstance().registerBlock("Replace", new ReplaceCreator());
-    }
-
     public ReplaceBlock(int id, String name, List<String> arguments) {
         super(id, name, arguments);
     }

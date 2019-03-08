@@ -1,8 +1,6 @@
-package Blocks.Blocks;
+package BlocksFactory.Blocks;
 
-import Blocks.Block;
-import Blocks.BlockCreators.ReadFileCreator;
-import Blocks.BlockFactory;
+import BlocksFactory.Block;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,10 +8,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class ReadFileBlock extends Block {
-    static {
-        BlockFactory.getInstance().registerBlock("ReadFile", new ReadFileCreator());
-    }
-
     public ReadFileBlock(int id, String name, List<String> arguments) {
         super(id, name, arguments);
     }
