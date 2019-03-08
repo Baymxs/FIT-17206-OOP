@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 public class Main {
     private static final Logger log = Logger.getLogger(Main.class);
 
-    public static void main(String[] args) throws ProgramArgException {
+    public static void main(String[] args) {
         if (args.length != 1) {
             try {
                 throw new ProgramArgException("invalid number of program arguments");
