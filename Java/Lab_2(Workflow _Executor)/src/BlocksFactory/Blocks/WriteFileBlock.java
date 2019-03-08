@@ -11,21 +11,15 @@ public class WriteFileBlock extends Block {
     }
 
     @Override
-    public StringBuilder execute(StringBuilder text) {
+    public StringBuilder execute(StringBuilder text) throws IOException {
         BufferedWriter outputStream = null;
         try {
             outputStream = new BufferedWriter(new FileWriter(getArgs().get(0)));
 
             outputStream.write(text.toString());
-        } catch (IOException e) {
-            System.out.println("I/O error: " + e);
         } finally {
-            try {
-                if (outputStream != null) {
-                    outputStream.close();
-                }
-            } catch (IOException e) {
-                System.out.println("error opening file");
+            if (outputStream != null) {
+                outputStream.close();
             }
         }
         return null;

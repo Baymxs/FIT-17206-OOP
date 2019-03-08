@@ -13,7 +13,7 @@ public class ReadFileBlock extends Block {
     }
 
     @Override
-    public StringBuilder execute(StringBuilder text) {
+    public StringBuilder execute(StringBuilder text) throws IOException {
         BufferedReader inputStream = null;
 
         String line;
@@ -25,15 +25,9 @@ public class ReadFileBlock extends Block {
                 text.append(line);
                 text.append("\n");
             }
-        } catch (IOException e) {
-            System.out.println("I/O error: " + e);
         } finally {
-            try {
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-            } catch (IOException e) {
-                System.out.println("error closing file");
+            if (inputStream != null) {
+                inputStream.close();
             }
         }
         return text;

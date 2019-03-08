@@ -1,5 +1,6 @@
 package BlocksFactory;
 
+import java.io.IOException;
 import java.util.List;
 
 public abstract class Block {
@@ -21,5 +22,5 @@ public abstract class Block {
         return arguments;
     }
 
-    public abstract StringBuilder execute(StringBuilder text);
+    public abstract StringBuilder execute(StringBuilder text) throws IOException;
 }

@@ -27,7 +27,6 @@ public class WFExecutor {
         String[] parsedBlockLine = line.split(" = ", 2);
 
         blockId = Integer.parseInt(parsedBlockLine[0]);
-        System.out.println(parsedBlockLine[1]);
         String[] parsedNameAndArgs = parsedBlockLine[1].split(" ", 2);
         blockName = parsedNameAndArgs[0];
 
@@ -46,6 +45,7 @@ public class WFExecutor {
 
     private void readWorkflow()
             throws NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException, IOException {
+
         BufferedReader bufferedReader = null;
 
         boolean blocks_parsing = false, execute_order_parsing = false;
@@ -67,12 +67,8 @@ public class WFExecutor {
                 }
             }
         } finally {
-            try {
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-            } catch (IOException e) {
-                System.out.println("error closing file");
+            if (inputStream != null) {
+                inputStream.close();
             }
         }
     }
@@ -89,6 +85,7 @@ public class WFExecutor {
 
     public void execute()
             throws NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException, IOException {
+
         StringBuilder text = new StringBuilder();
         Block block;
 

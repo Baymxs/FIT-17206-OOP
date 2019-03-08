@@ -15,7 +15,7 @@ public class Main {
             WFExecutor wfExecutor = new WFExecutor(inputStream);
             wfExecutor.execute();
         } catch (Exception e) {
-            System.out.println("Error: " + e);
+            System.err.println("Error: " + e);
         }
     }
 }
