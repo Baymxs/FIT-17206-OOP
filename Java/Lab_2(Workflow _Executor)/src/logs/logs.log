@@ -1,0 +1,11 @@
+2019-03-08 21:22:40 ERROR Main:23 - invalid number of program arguments
+2019-03-08 22:35:38 INFO  WFExecutor:96 - Workflow file reading was successful
+2019-03-08 22:38:26 INFO  WFExecutor:96 - workflow file reading was successful
+2019-03-08 22:38:27 INFO  Main:26 - execution was successful
+2019-03-08 22:42:53 INFO  Main:25 - execution start
+2019-03-08 22:42:53 INFO  WFExecutor:96 - workflow file reading was successful
+2019-03-08 22:42:53 INFO  Main:27 - execution was successful
+2019-03-08 22:44:40 INFO  Main:25 - execution start
+2019-03-08 22:44:40 INFO  WFExecutor:96 - workflow file reading was successful
+2019-03-08 22:44:40 INFO  Main:27 - execution was successful
+

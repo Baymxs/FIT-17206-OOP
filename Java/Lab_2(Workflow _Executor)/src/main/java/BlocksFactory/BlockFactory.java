@@ -13,7 +13,7 @@ public class BlockFactory {
 
 
     private BlockFactory() throws IOException {
-        blocksProperties.load(BlockFactory.class.getResourceAsStream("blocks.properties"));
+        blocksProperties.load(BlockFactory.class.getClassLoader().getResourceAsStream("blocks.properties"));
     }
 
     public static BlockFactory getInstance() throws IOException {

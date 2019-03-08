@@ -1,12 +1,15 @@
 import BlocksFactory.Block;
 import BlocksFactory.BlockFactory;
 import Exceptions.BlockNotFoundException;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class WFExecutor {
+    private static final Logger log = Logger.getLogger(WFExecutor.class);
+
     private InputStream inputStream;
     private List<Block> blocks;
     private List<Integer> executionOrder;
@@ -90,6 +93,7 @@ public class WFExecutor {
         Block block;
 
         readWorkflow();
+        log.info("workflow file reading was successful");
 
         for (Integer i : executionOrder) {
             block = findBlockById(i);
