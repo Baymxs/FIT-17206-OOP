@@ -11,12 +11,12 @@ public class WFExecutor {
     private static final Logger log = Logger.getLogger(WFExecutor.class);
 
     private InputStream inputStream;
-    private List<Block> blocks;
+    private Map<Integer, Block> blocks;
     private List<Integer> executionOrder;
 
     public WFExecutor(InputStream inputStream) {
         this.inputStream = inputStream;
-        blocks = new ArrayList<>();
+        blocks = new HashMap<>();
         executionOrder = new ArrayList<>();
     }
 
@@ -37,7 +37,7 @@ public class WFExecutor {
             blockArgsList = Arrays.asList(parsedNameAndArgs[1].split(" "));
         }
 
-        blocks.add(BlockFactory.getInstance().getBlock(blockId, blockName, blockArgsList));
+        blocks.put(blockId, BlockFactory.getInstance().getBlock(blockName, blockArgsList));
     }
 
     private void parseExecutionOrder(String line) {
@@ -76,28 +76,16 @@ public class WFExecutor {
         }
     }
 
-    private Block findBlockById(int blockId) {
-        Block block = null;
-        for (Block b : blocks) {
-            if (b.getId() == blockId) {
-                block = b;
-            }
-        }
-        return block;
-    }
-
     public void execute()
             throws NoSuchMethodException, BlockNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, ClassNotFoundException, IOException {
 
-        StringBuilder text = new StringBuilder();
-        Block block;
+        String text = "";
 
         readWorkflow();
         log.info("workflow file reading was successful");
 
         for (Integer i : executionOrder) {
-            block = findBlockById(i);
-            block.execute(text);
+            text = blocks.get(i).execute(text);
         }
     }
 }

@@ -1,6 +1,6 @@
 desc
 1 = readfile input.txt
 2 = writefile output.txt
-10 = replace Fred Tom
+10 = sort
 csed
 1 -> 10 -> 2

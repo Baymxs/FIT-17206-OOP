@@ -28,12 +28,15 @@ public class BlockFactory {
         return blockFactory;
     }
 
-    public Block getBlock(int blockId, String blockName, List<String> args)
-            throws BlockNotFoundException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException
-    {
+    public Block getBlock(String blockName, List<String> args)
+            throws BlockNotFoundException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, IOException {
+
+        Properties config = new Properties();
+        config.load(BlockFactory.class.getClassLoader().getResourceAsStream("config.properties"));
+
         if (!blocksProperties.containsKey(blockName)) {
             throw new BlockNotFoundException("Block " + blockName + " not found");
         }
-        return (Block) Class.forName("BlocksFactory.Blocks." + blocksProperties.get(blockName)).getConstructor(new Class[]{int.class, String.class, List.class}).newInstance(blockId, blockName, args);
+        return (Block) Class.forName(config.getProperty("BLOCK_CLASS_PATH") + blocksProperties.get(blockName)).getConstructor(new Class[]{List.class}).newInstance(args);
     }
 }

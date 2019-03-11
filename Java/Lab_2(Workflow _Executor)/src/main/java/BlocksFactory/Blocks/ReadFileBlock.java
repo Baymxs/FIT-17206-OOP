@@ -8,28 +8,30 @@ import java.io.IOException;
 import java.util.List;
 
 public class ReadFileBlock extends Block {
-    public ReadFileBlock(int id, String name, List<String> arguments) {
-        super(id, name, arguments);
+    public ReadFileBlock(List<String> arguments) {
+        super(arguments);
     }
 
     @Override
-    public StringBuilder execute(StringBuilder text) throws IOException {
+    public String execute(String text) throws IOException {
         BufferedReader inputStream = null;
 
         String line;
+
+        StringBuilder textBuilder = new StringBuilder();
 
         try {
             inputStream = new BufferedReader(new FileReader(getArgs().get(0)));
 
             while ((line = inputStream.readLine()) != null) {
-                text.append(line);
-                text.append("\n");
+                textBuilder.append(line);
+                textBuilder.append("\n");
             }
         } finally {
             if (inputStream != null) {
                 inputStream.close();
             }
         }
-        return text;
+        return textBuilder.toString();
     }
 }

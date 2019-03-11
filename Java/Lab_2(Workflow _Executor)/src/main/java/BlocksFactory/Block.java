@@ -4,23 +4,15 @@ import java.io.IOException;
 import java.util.List;
 
 public abstract class Block {
-    private int id;
-    private String name;
     private List<String> arguments;
 
-    public Block(int id, String name, List<String> arguments) {
-        this.id = id;
-        this.name = name;
+    public Block(List<String> arguments) {
         this.arguments = arguments;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public List<String> getArgs() {
         return arguments;
     }
 
-    public abstract StringBuilder execute(StringBuilder text) throws IOException;
+    public abstract String execute(String text) throws IOException;
 }
