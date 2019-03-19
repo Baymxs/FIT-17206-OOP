@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.nsu.ccfit.bayramov.Minesweeper.Controller.MenuController"
+            style="-fx-background-image: url(ru/nsu/ccfit/bayramov/Minesweeper/menu_background.jpg);"
+            prefHeight="600.0" prefWidth="800.0">
+  <children>
+    <ImageView fitHeight="89.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" x="100.0" y="70.0">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Minesweeper.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="startButton" fitHeight="67.0" fitWidth="210.0" layoutX="295.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#startButtonPressed" onMouseMoved="#startButtonMoved" onMouseExited="#startButtonExited">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/StartButton/StartButton.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="optionsButton" fitHeight="73.0" fitWidth="277.0" layoutX="261.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#optionsButtonMoved" onMouseExited="#optionsButtonExited">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/OptionsButton/OptionsButton.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="scoresButton" fitHeight="67.0" fitWidth="254.0" layoutX="268.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#scoresButtonMoved" onMouseExited="#scoresButtonExited">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/ScoresButton/ScoresButton.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="exitButton" fitHeight="67.0" fitWidth="152.0" layoutX="324.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#exitButtonMoved" onMouseExited="#exitButtonExited">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/ExitButton/ExitButton.png" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>
