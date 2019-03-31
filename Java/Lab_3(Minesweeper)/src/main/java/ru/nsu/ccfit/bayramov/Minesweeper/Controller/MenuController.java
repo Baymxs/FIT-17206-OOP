@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import ru.nsu.ccfit.bayramov.Minesweeper.Model.GameModel;
 
 
 import java.io.IOException;
@@ -37,6 +38,8 @@ public class MenuController {
 
 
     public void startButtonPressed(MouseEvent event) throws IOException {
+        GameModel.getInstance().setFromMenuWindow(true);
+
         Parent gameViewParent = FXMLLoader.load(getClass().getResource("../View/Game.fxml"));
 
         Scene gameViewScene = new Scene(gameViewParent);
@@ -61,6 +64,17 @@ public class MenuController {
 
     public void optionsButtonExited() {
         optionsButton.setImage(exitedOptionsButton);
+    }
+
+    public void scoresButtonPressed(MouseEvent event) throws IOException {
+        Parent gameViewParent = FXMLLoader.load(getClass().getResource("../View/Scores.fxml"));
+
+        Scene gameViewScene = new Scene(gameViewParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(gameViewScene);
+        window.show();
     }
 
     public void scoresButtonMoved() {

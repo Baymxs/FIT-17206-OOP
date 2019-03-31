@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url(ru/nsu/ccfit/bayramov/Minesweeper/menu_background.jpg);" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.ccfit.bayramov.Minesweeper.Controller.ScoresController">
+
+    <ImageView fx:id="backButton" fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backButtonClicked" onMouseExited="#backButtonExited" onMouseMoved="#backButtonMoved" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/BackButton/back_button.png" />
+        </image>
+    </ImageView>
+   <ImageView fitHeight="67.0" fitWidth="219.0" layoutX="383.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+           <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/score.png" />
+       </image>
+   </ImageView>
+   <ImageView fitHeight="67.0" fitWidth="195.0" layoutX="166.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/rank.png" />
+    </image>
+    </ImageView>
+
+    <GridPane fx:id="scorePanel" hgap="150.0" layoutX="243.0" layoutY="185.0">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="65.0" />
+            <ColumnConstraints prefWidth="65.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="65.0" />
+            <RowConstraints prefHeight="65.0" />
+            <RowConstraints prefHeight="65.0" />
+            <RowConstraints prefHeight="65.0" />
+            <RowConstraints prefHeight="65.0" />
+        </rowConstraints>
+    </GridPane>
+
+</AnchorPane>

@@ -25,7 +25,7 @@
         <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/OptionsButton/OptionsButton.png" />
       </image>
     </ImageView>
-    <ImageView fx:id="scoresButton" fitHeight="67.0" fitWidth="254.0" layoutX="268.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#scoresButtonMoved" onMouseExited="#scoresButtonExited">
+    <ImageView fx:id="scoresButton" fitHeight="67.0" fitWidth="254.0" layoutX="268.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#scoresButtonPressed" onMouseMoved="#scoresButtonMoved" onMouseExited="#scoresButtonExited">
       <image>
         <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/ScoresButton/ScoresButton.png" />
       </image>

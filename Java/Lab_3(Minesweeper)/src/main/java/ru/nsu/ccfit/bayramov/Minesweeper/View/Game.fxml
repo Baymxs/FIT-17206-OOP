@@ -13,627 +13,73 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url(ru/nsu/ccfit/bayramov/Minesweeper/menu_background.jpg);" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.ccfit.bayramov.Minesweeper.Controller.GameController">
   <children>
-    <AnchorPane layoutX="200.0" layoutY="27.0" prefHeight="48.0" prefWidth="144.0">
+    <AnchorPane layoutX="184.0" layoutY="36.0" prefHeight="48.0" prefWidth="192.0">
       <children>
-        <Label alignment="CENTER" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white&#10;&#10;" text="0">
-          <effect>
-            <DropShadow />
-          </effect>
+        <Label fx:id="flags" alignment="TOP_LEFT" layoutX="61.0" layoutY="-3.0" prefHeight="48.0" prefWidth="131.0" text="10">
           <font>
-            <Font name="Verdana" size="40.0" fx:id="x1" />
+            <Font size="40.0" fx:id="x1" />
           </font>
           <textFill>
-            <Color blue="1.000" green="0.640" fx:id="x2" />
+            <Color blue="1.000" green="0.880" red="0.000" fx:id="x2" />
           </textFill>
         </Label>
-        <Label alignment="CENTER" font="$x1" layoutX="48.0" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white" text="1" textFill="$x2">
-          <effect>
-            <DropShadow />
-          </effect>
-        </Label>
-        <Label alignment="CENTER" font="$x1" layoutX="96.0" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white" text="0" textFill="$x2">
-          <effect>
-            <DropShadow />
-          </effect>
-        </Label>
+        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/flag.png" />
+          </image>
+        </ImageView>
       </children>
     </AnchorPane>
-    <AnchorPane layoutX="456.0" layoutY="27.0" prefHeight="48.0" prefWidth="144.0">
+    <AnchorPane layoutX="419.0" layoutY="38.0" prefHeight="48.0" prefWidth="197.0">
       <children>
-        <Label alignment="CENTER" font="$x1" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white&#10;&#10;" text="0" textFill="$x2">
+        <Label fx:id="timerLabel" alignment="CENTER" font="$x1" layoutX="31.0" prefHeight="48.0" prefWidth="161.0" textFill="#00e0ff">
           <effect>
             <DropShadow />
           </effect>
         </Label>
-        <Label alignment="CENTER" font="$x1" layoutX="48.0" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white" text="0" textFill="$x2">
-          <effect>
-            <DropShadow />
-          </effect>
-        </Label>
-        <Label alignment="CENTER" font="$x1" layoutX="96.0" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: white" text="0" textFill="$x2">
-          <effect>
-            <DropShadow />
-          </effect>
-        </Label>
+        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/timer.png" />
+          </image>
+        </ImageView>
+            <Label fx:id="fakeTimerLabel" alignment="CENTER" layoutX="31.0" prefHeight="48.0" prefWidth="161.0" text="0" textFill="#00e0ff">
+               <font>
+                  <Font size="40.0" fx:id="x1" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
       </children>
     </AnchorPane>
-      <GridPane layoutX="160.0" layoutY="95.0">
-        <columnConstraints>
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-          <ColumnConstraints prefWidth="48.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-          <RowConstraints prefHeight="48.0" />
-        </rowConstraints>
-         <children>
-            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-               </image>
-            </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="1">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="2">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="3">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="4">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="5">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="6">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="7">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="8">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-           <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" GridPane.columnIndex="9">
-             <image>
-               <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/field.png" />
-             </image>
-           </ImageView>
-         </children>
-      </GridPane>
+    <GridPane fx:id="cellsPanel" layoutX="184.0" layoutY="106.0">
+      <columnConstraints>
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+        <ColumnConstraints prefWidth="48.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+        <RowConstraints prefHeight="48.0" />
+      </rowConstraints>
+    </GridPane>
+    <ImageView fx:id="backButton" fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseExited="#backButtonExited" onMouseMoved="#backButtonMoved" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/BackButton/back_button.png" />
+      </image>
+    </ImageView>
   </children>
 </AnchorPane>
