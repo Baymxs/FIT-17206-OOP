@@ -85,6 +85,13 @@ public class MenuController {
         scoresButton.setImage(exitedScoresButton);
     }
 
+    public void exitButtonPressed(MouseEvent event) {
+        GameModel.getInstance().setFromMenuWindow(true);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.close();
+    }
     public void exitButtonMoved() {
         exitButton.setImage(movedExitButton);
     }

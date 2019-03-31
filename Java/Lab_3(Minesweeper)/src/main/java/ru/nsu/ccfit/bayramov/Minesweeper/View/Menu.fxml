@@ -30,7 +30,7 @@
         <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/ScoresButton/ScoresButton.png" />
       </image>
     </ImageView>
-    <ImageView fx:id="exitButton" fitHeight="67.0" fitWidth="152.0" layoutX="324.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#exitButtonMoved" onMouseExited="#exitButtonExited">
+    <ImageView fx:id="exitButton" fitHeight="67.0" fitWidth="152.0" layoutX="324.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" onMouseMoved="#exitButtonMoved" onMouseExited="#exitButtonExited" onMousePressed="#exitButtonPressed">
       <image>
         <Image url="@/ru/nsu/ccfit/bayramov/Minesweeper/Buttons/ExitButton/ExitButton.png" />
       </image>
