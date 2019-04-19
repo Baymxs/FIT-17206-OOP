@@ -1,0 +1,150 @@
+2019-04-19 11:32:29 - ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8081] is available now.
+2019-04-19 11:32:59 - Got a connection with: Socket[addr=/10.9.1.118,port=56216,localport=8081]
+2019-04-19 11:32:59 - 
+Received a json from /10.9.1.118: {"userName":"nkj","commandType":"loginClientCommand"}
+2019-04-19 11:32:59 - User nkj(/10.9.1.118) connected to the server.
+2019-04-19 11:34:09 - ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8081] is available now.
+2019-04-19 11:34:43 - Got a connection with: Socket[addr=/10.9.1.118,port=56221,localport=8081]
+2019-04-19 11:34:43 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:34:43 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:40:35 - Got a connection with: Socket[addr=/10.9.1.118,port=56242,localport=8081]
+2019-04-19 11:40:35 - Received a json from /10.9.1.118: {"userName":"hjk","commandType":"loginClientCommand"}
+2019-04-19 11:40:35 - User hjk(/10.9.1.118) connected to the server.
+2019-04-19 11:40:44 - Got a connection with: Socket[addr=/10.9.1.118,port=56243,localport=8081]
+2019-04-19 11:40:44 - Received a json from /10.9.1.118: {"userName":"hjk","commandType":"loginClientCommand"}
+2019-04-19 11:40:44 - User hjk(/10.9.1.118) connected to the server.
+2019-04-19 11:40:54 - ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8081] is available now.
+2019-04-19 11:41:01 - Got a connection with: Socket[addr=/10.9.1.118,port=56249,localport=8081]
+2019-04-19 11:41:01 - Received a json from /10.9.1.118: {"userName":"hjk","commandType":"loginClientCommand"}
+2019-04-19 11:41:01 - User hjk(/10.9.1.118) connected to the server.
+2019-04-19 11:41:02 - Got a connection with: Socket[addr=/10.9.1.118,port=56250,localport=8081]
+2019-04-19 11:41:02 - Received a json from /10.9.1.118: {"userName":"hjk","commandType":"loginClientCommand"}
+2019-04-19 11:41:02 - User hjk(/10.9.1.118) connected to the server.
+2019-04-19 11:41:03 - Got a connection with: Socket[addr=/10.9.1.118,port=56251,localport=8081]
+2019-04-19 11:41:03 - Received a json from /10.9.1.118: {"userName":"hjk","commandType":"loginClientCommand"}
+2019-04-19 11:41:03 - User hjk(/10.9.1.118) connected to the server.
+2019-04-19 11:42:57 - Got a connection with: Socket[addr=/10.9.1.118,port=56262,localport=8081]
+2019-04-19 11:42:57 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:42:57 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:44:57 - Got a connection with: Socket[addr=/10.9.1.118,port=56392,localport=8081]
+2019-04-19 11:44:57 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 11:44:57 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 11:45:02 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"logoutClientCommand"}
+2019-04-19 11:45:02 - User 0.0.0.0(/10.9.1.118) disconnected from the server.
+2019-04-19 11:51:54 - Got a connection with: Socket[addr=/10.9.1.118,port=56417,localport=8081]
+2019-04-19 11:51:54 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:51:54 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:52:59 - Got a connection with: Socket[addr=/10.9.1.118,port=56420,localport=8081]
+2019-04-19 11:52:59 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:52:59 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:53:12 - Received a json from /10.9.1.118: {"message":"Hello World!","userName":"Nidjat","commandType":"messageClientCommand"}
+2019-04-19 11:53:12 - User Nidjat(/10.9.1.118) told for everyone: Hello World!
+2019-04-19 11:53:43 - Got a connection with: Socket[addr=/10.9.1.118,port=56422,localport=8081]
+2019-04-19 11:53:43 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:53:43 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:53:49 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"logoutClientCommand"}
+2019-04-19 11:53:49 - User Nidjat(/10.9.1.118) disconnected from the server.
+2019-04-19 11:54:10 - Got a connection with: Socket[addr=/10.9.1.118,port=56424,localport=8081]
+2019-04-19 11:54:11 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:54:11 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 11:55:24 - Got a connection with: Socket[addr=/10.9.1.118,port=56465,localport=8081]
+2019-04-19 11:55:24 - Received a json from /10.9.1.118: {"userName":"nIDJAT","commandType":"loginClientCommand"}
+2019-04-19 11:55:24 - User nIDJAT(/10.9.1.118) connected to the server.
+2019-04-19 11:58:39 - Got a connection with: Socket[addr=/10.9.1.118,port=56591,localport=8081]
+2019-04-19 11:58:39 - Received a json from /10.9.1.118: {"userName":"Nidjat","commandType":"loginClientCommand"}
+2019-04-19 11:58:39 - User Nidjat(/10.9.1.118) connected to the server.
+2019-04-19 12:00:20 - Got a connection with: Socket[addr=/10.9.1.118,port=56594,localport=8081]
+2019-04-19 12:00:20 - Received a json from /10.9.1.118: {"userName":"Nijat","commandType":"loginClientCommand"}
+2019-04-19 12:00:20 - User Nijat(/10.9.1.118) connected to the server.
+2019-04-19 12:00:43 - Received a json from /10.9.1.118: {"message":"Hello","userName":"Nijat","commandType":"messageClientCommand"}
+2019-04-19 12:00:43 - User Nijat(/10.9.1.118) told for everyone: Hello
+2019-04-19 12:00:51 - Received a json from /10.9.1.118: {"userName":"Nijat","commandType":"logoutClientCommand"}
+2019-04-19 12:00:51 - User Nijat(/10.9.1.118) disconnected from the server.
+2019-04-19 12:00:59 - Got a connection with: Socket[addr=/10.9.1.118,port=56595,localport=8081]
+2019-04-19 12:00:59 - Received a json from /10.9.1.118: {"userName":"pepe","commandType":"loginClientCommand"}
+2019-04-19 12:00:59 - User pepe(/10.9.1.118) connected to the server.
+2019-04-19 12:01:46 - Got a connection with: Socket[addr=/10.9.1.118,port=56597,localport=8081]
+2019-04-19 12:01:46 - Received a json from /10.9.1.118: {"userName":"lUPA","commandType":"loginClientCommand"}
+2019-04-19 12:01:46 - User lUPA(/10.9.1.118) connected to the server.
+2019-04-19 12:01:55 - Received a json from /10.9.1.118: {"message":"hELLO","userName":"lUPA","commandType":"messageClientCommand"}
+2019-04-19 12:01:55 - User lUPA(/10.9.1.118) told for everyone: hELLO
+2019-04-19 12:02:24 - Received a json from /10.9.1.118: {"message":"Hello!Hello!Hello!Hello!Hello!Hello!","userName":"lUPA","commandType":"messageClientCommand"}
+2019-04-19 12:02:24 - User lUPA(/10.9.1.118) told for everyone: Hello!Hello!Hello!Hello!Hello!Hello!
+2019-04-19 12:02:30 - Received a json from /10.9.1.118: {"message":"Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!","userName":"lUPA","commandType":"messageClientCommand"}
+2019-04-19 12:02:30 - User lUPA(/10.9.1.118) told for everyone: Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!
+2019-04-19 12:03:11 - Received a json from /10.9.1.118: {"message":"Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!","userName":"lUPA","commandType":"messageClientCommand"}
+2019-04-19 12:03:11 - User lUPA(/10.9.1.118) told for everyone: Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!
+2019-04-19 12:04:48 - Got a connection with: Socket[addr=/10.9.1.118,port=56602,localport=8081]
+2019-04-19 12:04:48 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 12:04:48 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 12:05:55 - Got a connection with: Socket[addr=/10.9.1.118,port=56613,localport=8081]
+2019-04-19 12:05:55 - Received a json from /10.9.1.118: {"userName":"Pupa","commandType":"loginClientCommand"}
+2019-04-19 12:05:55 - User Pupa(/10.9.1.118) connected to the server.
+2019-04-19 12:06:17 - Got a connection with: Socket[addr=/10.9.1.118,port=56615,localport=8081]
+2019-04-19 12:06:17 - Received a json from /10.9.1.118: {"userName":"KLKJLJK","commandType":"loginClientCommand"}
+2019-04-19 12:06:17 - User KLKJLJK(/10.9.1.118) connected to the server.
+2019-04-19 12:06:59 - Got a connection with: Socket[addr=/10.9.1.118,port=56619,localport=8081]
+2019-04-19 12:06:59 - Received a json from /10.9.1.118: {"userName":"ef","commandType":"loginClientCommand"}
+2019-04-19 12:06:59 - User ef(/10.9.1.118) connected to the server.
+2019-04-19 12:08:21 - Got a connection with: Socket[addr=/10.9.1.118,port=56624,localport=8081]
+2019-04-19 12:08:21 - Received a json from /10.9.1.118: {"userName":"0.0.0..0","commandType":"loginClientCommand"}
+2019-04-19 12:08:21 - User 0.0.0..0(/10.9.1.118) connected to the server.
+2019-04-19 12:10:13 - Got a connection with: Socket[addr=/10.9.1.118,port=56631,localport=8081]
+2019-04-19 12:10:13 - Received a json from /10.9.1.118: {"userName":"","commandType":"loginClientCommand"}
+2019-04-19 12:10:13 - User (/10.9.1.118) connected to the server.
+2019-04-19 12:10:20 - Received a json from /10.9.1.118: {"message":"kj","userName":"","commandType":"messageClientCommand"}
+2019-04-19 12:10:20 - User (/10.9.1.118) told for everyone: kj
+2019-04-19 12:10:23 - Received a json from /10.9.1.118: {"message":"k","userName":"","commandType":"messageClientCommand"}
+2019-04-19 12:10:23 - User (/10.9.1.118) told for everyone: k
+2019-04-19 12:10:44 - Got a connection with: Socket[addr=/10.9.1.118,port=56633,localport=8081]
+2019-04-19 12:10:44 - Received a json from /10.9.1.118: {"userName":"kllkj;kl","commandType":"loginClientCommand"}
+2019-04-19 12:10:44 - User kllkj;kl(/10.9.1.118) connected to the server.
+2019-04-19 12:11:22 - Got a connection with: Socket[addr=/10.9.1.118,port=56635,localport=8081]
+2019-04-19 12:11:22 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 12:11:22 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 12:12:25 - Got a connection with: Socket[addr=/10.9.1.118,port=56637,localport=8081]
+2019-04-19 12:12:25 - Received a json from /10.9.1.118: {"userName":"awfaw","commandType":"loginClientCommand"}
+2019-04-19 12:12:25 - User awfaw(/10.9.1.118) connected to the server.
+2019-04-19 12:12:54 - Got a connection with: Socket[addr=/10.9.1.118,port=56639,localport=8081]
+2019-04-19 12:12:54 - Received a json from /10.9.1.118: {"userName":"sd","commandType":"loginClientCommand"}
+2019-04-19 12:12:54 - User sd(/10.9.1.118) connected to the server.
+2019-04-19 12:14:10 - Got a connection with: Socket[addr=/10.9.1.118,port=56641,localport=8081]
+2019-04-19 12:14:10 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 12:14:10 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 12:17:36 - Got a connection with: Socket[addr=/10.9.1.118,port=56643,localport=8081]
+2019-04-19 12:17:36 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 12:17:36 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 12:18:41 - Got a connection with: Socket[addr=/10.9.1.118,port=56645,localport=8081]
+2019-04-19 12:18:41 - Received a json from /10.9.1.118: {"userName":"0.0.0.0","commandType":"loginClientCommand"}
+2019-04-19 12:18:41 - User 0.0.0.0(/10.9.1.118) connected to the server.
+2019-04-19 12:18:47 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:47 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:49 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:49 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:50 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:50 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:50 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:50 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:50 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:50 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:50 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:50 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:50 - Received a json from /10.9.1.118: {"message":"","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:50 - User 0.0.0.0(/10.9.1.118) told for everyone: 
+2019-04-19 12:18:55 - Received a json from /10.9.1.118: {"message":"8080","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:18:55 - User 0.0.0.0(/10.9.1.118) told for everyone: 8080
+2019-04-19 12:19:02 - Received a json from /10.9.1.118: {"message":"Hello ","userName":"0.0.0.0","commandType":"messageClientCommand"}
+2019-04-19 12:19:02 - User 0.0.0.0(/10.9.1.118) told for everyone: Hello 
+2019-04-19 12:19:36 - Got a connection with: Socket[addr=/10.9.1.118,port=56647,localport=8081]
+2019-04-19 12:19:36 - Received a json from /10.9.1.118: {"userName":"0f","commandType":"loginClientCommand"}
+2019-04-19 12:19:36 - User 0f(/10.9.1.118) connected to the server.
+2019-04-19 12:20:49 - Got a connection with: Socket[addr=/10.9.1.118,port=56649,localport=8081]
+2019-04-19 12:20:49 - Received a json from /10.9.1.118: {"userName":"adfsfsg","commandType":"loginClientCommand"}
+2019-04-19 12:20:49 - User adfsfsg(/10.9.1.118) connected to the server.
+2019-04-19 12:21:01 - Received a json from /10.9.1.118: {"message":"Hello","userName":"adfsfsg","commandType":"messageClientCommand"}
+2019-04-19 12:21:01 - User adfsfsg(/10.9.1.118) told for everyone: Hello
+2019-04-19 12:21:02 - Received a json from /10.9.1.118: {"userName":"adfsfsg","commandType":"logoutClientCommand"}
+2019-04-19 12:21:02 - User adfsfsg(/10.9.1.118) disconnected from the server.
+2019-04-19 12:21:10 - Got a connection with: Socket[addr=/10.9.1.118,port=56650,localport=8081]
+2019-04-19 12:21:10 - Received a json from /10.9.1.118: {"userName":"fweew","commandType":"loginClientCommand"}
+2019-04-19 12:21:10 - User fweew(/10.9.1.118) connected to the server.
