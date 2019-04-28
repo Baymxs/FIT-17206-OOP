@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -32,6 +33,6 @@
         <Image url="@/ru/nsu/ccfit/bayramov/chat_client/online_chat.png" />
       </image>
     </ImageView>
-    <Label fx:id="errorLabel" layoutX="355.0" layoutY="347.0" text="Unknown host" textFill="RED" visible="false" />
+    <Label fx:id="errorLabel" layoutX="248.0" layoutY="347.0" text="Unknown host" textFill="RED" visible="false" />
   </children>
 </AnchorPane>

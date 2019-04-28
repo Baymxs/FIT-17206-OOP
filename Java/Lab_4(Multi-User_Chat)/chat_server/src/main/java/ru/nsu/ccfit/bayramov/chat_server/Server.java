@@ -12,12 +12,19 @@ import java.util.concurrent.Executors;
 import com.google.gson.JsonObject;
 import org.apache.log4j.Logger;
 import ru.nsu.ccfit.bayramov.chat_server.commands.*;
+import ru.nsu.ccfit.bayramov.chat_server.commands.response_commands.login.LoginErrorResponse;
+import ru.nsu.ccfit.bayramov.chat_server.commands.response_commands.login.LoginSuccessResponse;
+import ru.nsu.ccfit.bayramov.chat_server.commands.server_commands.ListServerCommand;
+import ru.nsu.ccfit.bayramov.chat_server.commands.server_commands.LoginServerCommand;
+import ru.nsu.ccfit.bayramov.chat_server.commands.server_commands.LogoutServerCommand;
+import ru.nsu.ccfit.bayramov.chat_server.commands.server_commands.MessageServerCommand;
 
 class Server {
     private static final Logger log = Logger.getLogger(Server.class);
 
-    private static final int port = 8081;
-    private static final int users = 50;
+    private final int port = 8081;
+    private final int users = 30;
+    private int currentUsers = 0;
     private Socket clientSocket;
     private Map<String, PrintWriter> clients;
 
@@ -63,13 +70,27 @@ class Server {
 
                     switch (commandType) {
                         case "loginClientCommand":
-                            log.info("User " + jsonObject.get("userName").getAsString() + "(" + socket.getInetAddress() + ")" + " connected to the server.");
-
                             PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream())), true);
-                            clients.put(jsonObject.get("userName").getAsString(), out);
 
-                            tellEveryone(new LoginServerCommand(jsonObject.get("userName").getAsString()));
-                            tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
+                            if (clients.containsKey(jsonObject.get("userName").getAsString())) {
+                                log.info(jsonObject.get("userName").getAsString() + " user name has already taken");
+
+                                out.println(jsonSerializer.toJson(new LoginErrorResponse("This user name has already taken")));
+                            } else if (currentUsers == users) {
+                                log.info("Maximum number of users exceeded");
+
+                                out.println(jsonSerializer.toJson(new LoginErrorResponse("Maximum number of users exceeded")));
+                            } else {
+                                log.info("User " + jsonObject.get("userName").getAsString() + "(" + socket.getInetAddress() + ")" + " connected to the server.");
+
+                                clients.put(jsonObject.get("userName").getAsString(), out);
+                                currentUsers++;
+
+                                out.println(jsonSerializer.toJson(new LoginSuccessResponse()));
+
+                                tellEveryone(new LoginServerCommand(jsonObject.get("userName").getAsString()));
+                                tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
+                            }
 
                             break;
                         case "logoutClientCommand":

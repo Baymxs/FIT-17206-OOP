@@ -2,16 +2,24 @@ package ru.nsu.ccfit.bayramov.chat_client.model;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import javafx.application.Platform;
 import ru.nsu.ccfit.bayramov.chat_client.model.commands.ServerCommands.ListServerCommand;
-import ru.nsu.ccfit.bayramov.chat_client.сontroller.Chat;
 import ru.nsu.ccfit.bayramov.chat_client.model.commands.*;
+import ru.nsu.ccfit.bayramov.chat_client.сontroller.Chat;
 
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Model {
     private static Model instance = new Model();
+
+    private EventManager events;
+
+    private Gson jsonSerializer;
 
     private Socket socket;
 
@@ -20,14 +28,21 @@ public class Model {
 
     private String userName;
 
-    Thread incomingReaderThread;
+    private List<String> userNames;
 
-    Gson jsonSerializer = new Gson();
+    private Model() {
+        events = new EventManager("login", "loginResponse", "logout", "message", "list");
+        jsonSerializer = new Gson();
 
-    private Model() {}
+        userNames = new ArrayList<>();
+    }
 
     public static Model getInstance() {
         return instance;
+    }
+
+    public EventManager getEventManager() {
+        return events;
     }
 
     public void startUp(String userName, String IPAddress, String port) throws IOException {
@@ -36,20 +51,19 @@ public class Model {
         reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 
-        this.userName = userName;
-
-        incomingReaderThread = new Thread(new IncomingReader());
-        incomingReaderThread.start();
+        new Thread(new IncomingReader()).start();
 
         login(userName);
 
-        System.out.println("network established");
+        this.userName = userName;
     }
 
     public void finishSession() {
         logout(userName);
+    }
 
-        userName = "";
+    public void clearUserNames() {
+        userNames.clear();
     }
 
     public class IncomingReader implements Runnable {
@@ -61,26 +75,33 @@ public class Model {
                     JsonObject jsonObject = new Gson().fromJson(json, JsonObject.class);
 
                     String commandType = jsonObject.get("commandType").getAsString();
-                    System.out.println(json);
 
                     switch (commandType) {
+                        case "loginServerResponse":
+                            events.notify("loginResponse", jsonObject.get("response").getAsString());
+                            if (jsonObject.get("response").getAsString().equals("success")) {
+                                events.unsubscribeAll("loginResponse");
+                            }
+                            break;
                         case "loginServerCommand":
-                            Chat.refreshMessagesPane(jsonObject.get("userName").getAsString(), " connected to the server! Welcome!");
+                            events.notify("login", jsonObject.get("userName").getAsString() +" connected to the server.");
                             break;
                         case "logoutServerCommand":
                             if (jsonObject.get("userName").getAsString().equals(userName)) {
                                 socket.close();
                                 break loop;
                             } else {
-                                Chat.refreshMessagesPane(jsonObject.get("userName").getAsString(), " disconnected from the server! Goodbye!");
+                                events.notify("logout", jsonObject.get("userName").getAsString() + " disconnected from the server");
                             }
                             break;
                         case "messageServerCommand":
-                            Chat.refreshMessagesPane(jsonObject.get("userName").getAsString() + ": " + jsonObject.get("message").getAsString());
+                            events.notify("message", jsonObject.get("userName").getAsString(), jsonObject.get("message").getAsString());
                             break;
                         case "listServerCommand":
-                            ListServerCommand listServerCommand = new Gson().fromJson(json, ListServerCommand.class);
-                            Chat.refreshUsersPane(listServerCommand.getUserNames());
+                            userNames.clear();
+                            userNames.addAll(new Gson().fromJson(json, ListServerCommand.class).getUserNames());
+                            events.notify("list", userNames);
+                            break;
                     }
                 }
             } catch (IOException ex) {
@@ -89,12 +110,12 @@ public class Model {
         }
     }
 
-    public void login(String userName) {
+    private void login(String userName) {
         String json = jsonSerializer.toJson(new LoginClientCommand(userName));
         writer.println(json);
     }
 
-    public void logout(String userName) {
+    private void logout(String userName) {
         String json = jsonSerializer.toJson(new LogoutClientCommand(userName));
         writer.println(json);
     }

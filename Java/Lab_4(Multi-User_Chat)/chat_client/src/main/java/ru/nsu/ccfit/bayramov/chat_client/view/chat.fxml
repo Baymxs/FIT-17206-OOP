@@ -4,12 +4,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #A5CCFFl; -fx-font-family: Verdana;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.nsu.ccfit.bayramov.chat_client.сontroller.Chat">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: A5CCFF; -fx-font-family: Roboto;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.nsu.ccfit.bayramov.chat_client.сontroller.Chat">
   <children>
+    <ListView fx:id="messagesListView" layoutX="25.0" layoutY="25.0" prefHeight="496.0" prefWidth="525.0" style="-fx-font-size: 12pt" />
+    <ListView fx:id="usersListView" editable="false" layoutX="575.0" layoutY="25.0" pickOnBounds="true" prefHeight="496.0" prefWidth="200.0" style="-fx-font-size: 14pt" />
     <TextField fx:id="messageField" layoutX="25.0" layoutY="546.0" prefHeight="29.0" prefWidth="420.0" />
-    <ScrollPane fx:id="messagesPane" content="$null" hbarPolicy="NEVER" layoutX="25.0" layoutY="25.0" prefHeight="496.0" prefWidth="525.0" style="-fx-font-size: 12pt;" />
-    <ScrollPane fx:id="usersPane" content="$null" hbarPolicy="NEVER" layoutX="575.0" layoutY="25.0" prefHeight="496.0" prefWidth="200.0" style="-fx-font-family: Verdana; -fx-font-size: 14pt;" />
-    <Button fx:id="quitButton" layoutX="575.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#quitButtonClicked" prefHeight="29.0" prefWidth="80.0" style="-fx-font-family: Impact;" text="Quit" />
-    <Button fx:id="messageSendButton" layoutX="470.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#sendButtonClicked" prefHeight="29.0" prefWidth="80.0" style="-fx-font-family: Impact;"  text="Send" />
+    <Button fx:id="quitButton" layoutX="575.0" layoutY="546.0" onMouseClicked="#quitButtonClicked" prefHeight="29.0" prefWidth="80.0" text="Quit" />
+    <Button fx:id="messageSendButton" layoutX="470.0" layoutY="546.0" onMouseClicked="#sendButtonClicked" prefHeight="29.0" prefWidth="80.0" text="Send" />
   </children>
 </AnchorPane>
