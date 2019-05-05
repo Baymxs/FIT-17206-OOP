@@ -2,52 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b98e39a-e59b-453c-93bc-212a8bdfccc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/model/Model$IncomingReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/model/Model$IncomingReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/сontroller/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/сontroller/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/сontroller/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/classes/java/main/ru/nsu/ccfit/bayramov/chat_client/сontroller/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/resources/main/ru/nsu/ccfit/bayramov/chat_client/view/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/resources/main/ru/nsu/ccfit/bayramov/chat_client/view/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/build/resources/main/ru/nsu/ccfit/bayramov/chat_client/view/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/build/resources/main/ru/nsu/ccfit/bayramov/chat_client/view/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/MainFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/view/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/view/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/view/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/view/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/сontroller/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/сontroller/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/сontroller/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chat_client/src/main/java/ru/nsu/ccfit/bayramov/chat_client/сontroller/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/Server$ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/Server$ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/ListServerCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/LoginServerCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/LogoutServerCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/MessageServerCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/ResponseServerCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/nsu/ccfit/bayramov/chat_server/commands/ResponseServerCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logs/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/ListServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/server_commands/ListServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/LoginServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/server_commands/LoginServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/LogoutServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/server_commands/LogoutServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/MessageServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/server_commands/MessageServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/ResponseServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/commands/ResponseServerCommand.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -117,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -335,7 +301,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556453014086" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556454980446" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -413,12 +379,13 @@
       <workItem from="1556250937209" duration="159000" />
       <workItem from="1556257519375" duration="18577000" />
       <workItem from="1556432096164" duration="1233000" />
-      <workItem from="1556436826096" duration="3412000" />
+      <workItem from="1556436826096" duration="3703000" />
+      <workItem from="1556455226778" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62224000" />
+    <option name="totallyTimeSpent" value="62572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +400,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35218093" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3578352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -442,7 +409,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24383561" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24383561" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968652" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -521,6 +488,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/logs/logs.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="240">
@@ -577,23 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/ccfit/bayramov/chat_server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

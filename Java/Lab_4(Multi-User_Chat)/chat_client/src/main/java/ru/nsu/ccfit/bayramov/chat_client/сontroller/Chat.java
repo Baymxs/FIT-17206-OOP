@@ -53,7 +53,7 @@ public class Chat implements Initializable, EventListener {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        model.getEventManager().subscribe( this, "login", "logout", "message", "list");
+        model.getEventManager().subscribe( this, "login", "logout", "message", "list", "shutdown");
 
         messagesListView.itemsProperty().bind(messagesListProperty);
         messagesListView.setMouseTransparent(true);
@@ -75,7 +75,7 @@ public class Chat implements Initializable, EventListener {
     public void update(String eventType, String userName, String message) {
         Platform.runLater(() -> {
             if (eventType.equals("message")) {
-                refreshMessagesListView(userName, message);
+                refreshMessagesListView(userName, message, eventType);
             }
         });
     }
@@ -83,18 +83,23 @@ public class Chat implements Initializable, EventListener {
     @Override
     public void update(String eventType, String message) {
         Platform.runLater(() -> {
-            if (eventType.equals("login") || eventType.equals("logout")) {
-                refreshMessagesListView("", message);
+            if (eventType.equals("login") || eventType.equals("logout") || eventType.equals("shutdown")) {
+                refreshMessagesListView("", message, eventType);
             }
         });
     }
 
-    private void refreshMessagesListView(String userName, String message) {
+    private void refreshMessagesListView(String userName, String message, String messageType) {
         TextFlow textFlow = new TextFlow();
 
         if (userName.equals("")) {
             Text messageText = new Text(message);
-            messageText.setFill(Color.rgb(66, 100, 139));
+
+            if (messageType.equals("shutdown")) {
+                messageText.setFill(Color.rgb(255, 66, 53));
+            } else if (messageType.equals("login") || messageType.equals("logout")) {
+                messageText.setFill(Color.rgb(66, 100, 139));
+            }
 
             textFlow.getChildren().addAll(messageText);
         } else {

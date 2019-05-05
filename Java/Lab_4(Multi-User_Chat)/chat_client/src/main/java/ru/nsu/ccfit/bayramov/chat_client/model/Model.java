@@ -31,7 +31,7 @@ public class Model {
     private List<String> userNames;
 
     private Model() {
-        events = new EventManager("login", "loginResponse", "logout", "message", "list");
+        events = new EventManager("login", "loginResponse", "logout", "message", "list", "shutdown");
         jsonSerializer = new Gson();
 
         userNames = new ArrayList<>();
@@ -81,6 +81,9 @@ public class Model {
                             events.notify("loginResponse", jsonObject.get("response").getAsString());
                             if (jsonObject.get("response").getAsString().equals("success")) {
                                 events.unsubscribeAll("loginResponse");
+                            } else {
+                                socket.close();
+                                break loop;
                             }
                             break;
                         case "loginServerCommand":
@@ -107,6 +110,7 @@ public class Model {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
+            events.notify("shutdown", "Server is not available now. Sorry, dude(");
         }
     }
 

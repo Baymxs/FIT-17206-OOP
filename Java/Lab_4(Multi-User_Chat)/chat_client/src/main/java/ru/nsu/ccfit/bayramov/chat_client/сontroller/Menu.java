@@ -53,6 +53,7 @@ public class Menu implements Initializable, EventListener {
                     errorLabel.setVisible(false);
 
                     try {
+
                         Parent chatViewParent = FXMLLoader.load(getClass().getResource("../view/chat.fxml"));
 
                         Scene chatViewScene = new Scene(chatViewParent);
@@ -63,7 +64,8 @@ public class Menu implements Initializable, EventListener {
                         window.setScene(chatViewScene);
                         window.show();
 
-                    } catch (Exception ignored) {
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
             }

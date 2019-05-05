@@ -23,8 +23,8 @@ class Server {
     private static final Logger log = Logger.getLogger(Server.class);
 
     private final int port = 8081;
-    private final int users = 30;
-    private int currentUsers = 0;
+    private final int users = 1;
+    private int currentUsers = 20;
     private Socket clientSocket;
     private Map<String, PrintWriter> clients;
 
@@ -97,6 +97,7 @@ class Server {
                             log.info("User " + jsonObject.get("userName").getAsString() + "(" + socket.getInetAddress() + ")" + " disconnected from the server.");
 
                             clients.remove(jsonObject.get("userName").getAsString());
+                            currentUsers--;
 
                             tellEveryone(new LogoutServerCommand(jsonObject.get("userName").getAsString()));
                             tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
