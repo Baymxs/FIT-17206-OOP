@@ -23,8 +23,8 @@ class Server {
     private static final Logger log = Logger.getLogger(Server.class);
 
     private final int port = 8081;
-    private final int users = 1;
-    private int currentUsers = 20;
+    private final int users = 20;
+    private int currentUsers = 0;
     private Socket clientSocket;
     private Map<String, PrintWriter> clients;
 
@@ -60,6 +60,8 @@ class Server {
         @Override
         public void run() {
             String json;
+            String userName = null;
+
             try {
                 while ((json = bufferedReader.readLine()) != null) {
                     log.info("Received a json from " + socket.getInetAddress() + ": " + json);
@@ -83,6 +85,8 @@ class Server {
                             } else {
                                 log.info("User " + jsonObject.get("userName").getAsString() + "(" + socket.getInetAddress() + ")" + " connected to the server.");
 
+                                userName = jsonObject.get("userName").getAsString();
+
                                 clients.put(jsonObject.get("userName").getAsString(), out);
                                 currentUsers++;
 
@@ -96,11 +100,7 @@ class Server {
                         case "logoutClientCommand":
                             log.info("User " + jsonObject.get("userName").getAsString() + "(" + socket.getInetAddress() + ")" + " disconnected from the server.");
 
-                            clients.remove(jsonObject.get("userName").getAsString());
-                            currentUsers--;
-
-                            tellEveryone(new LogoutServerCommand(jsonObject.get("userName").getAsString()));
-                            tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
+                            clients.get(userName).println(jsonSerializer.toJson(new LogoutServerCommand(jsonObject.get("userName").getAsString())));
 
                             break;
                         case "messageClientCommand":
@@ -114,6 +114,11 @@ class Server {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+
+            clients.remove(userName);
+            currentUsers--;
+
+            tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
         }
     }
 
