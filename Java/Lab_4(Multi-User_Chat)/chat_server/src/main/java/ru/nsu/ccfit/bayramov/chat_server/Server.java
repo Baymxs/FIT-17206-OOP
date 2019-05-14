@@ -119,6 +119,7 @@ class Server {
             currentUsers--;
 
             tellEveryone(new ListServerCommand(new ArrayList<>(clients.keySet())));
+            tellEveryone(new LogoutServerCommand(userName));
         }
     }
 
